@@ -1,0 +1,760 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>18TRIP — Chapter 005-A01</title>
+
+    <style>
+        /* =========================
+           GENERAL PAGE
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background: #fff4fa;
+            color: #5f4b58;
+        }
+
+        .links {
+            height: auto;
+        }
+        
+        .links a {
+            color: #5f4b58;
+        }
+
+
+
+        /* =========================
+           TOP DECORATION
+        ========================= */
+
+        .top-decoration {
+            height: 14px;
+            background: repeating-linear-gradient(
+                45deg,
+                #ff9fc8,
+                #ff9fc8 12px,
+                #ffd2e5 12px,
+                #ffd2e5 24px
+            );
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            text-align: center;
+            padding: 55px 20px 40px;
+
+            background:
+                radial-gradient(circle at 20% 30%, #ffffff 0 3px, transparent 5px),
+                radial-gradient(circle at 80% 30%, #ffffff 0 3px, transparent 5px),
+                #ffc6df;
+
+            border-bottom: 4px solid #f39abd;
+        }
+
+        .heart {
+            font-size: 42px;
+        }
+
+        h1 {
+            margin: 8px 0 5px;
+
+            font-family: Georgia, serif;
+            font-size: clamp(38px, 8vw, 70px);
+
+            color: #9c4f76;
+
+            text-shadow: 3px 3px 0 #fff;
+        }
+
+        .subtitle {
+            margin: 0;
+            font-size: 17px;
+            letter-spacing: 1px;
+            color: #8d6177;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            padding: 16px;
+
+            background: #fff;
+            border-bottom: 1px solid #f2cada;
+        }
+
+        nav a {
+            text-decoration: none;
+
+            padding: 9px 18px;
+
+            border-radius: 999px;
+
+            color: #9c4f76;
+            background: #fff0f6;
+
+            border: 1px solid #f3c3d8;
+
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background: #ffc6df;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        main {
+            width: min(1000px, 92%);
+            margin: 40px auto;
+        }
+
+        .welcome {
+            text-align: center;
+
+            background: white;
+
+            padding: 35px 25px;
+
+            border-radius: 25px;
+
+            border: 2px solid #f5c9dc;
+
+            box-shadow: 0 8px 25px rgba(170, 100, 130, 0.08);
+        }
+
+        .welcome h2 {
+            margin-top: 0;
+
+            color: #a34f78;
+            font-family: Georgia, serif;
+        }
+
+        .welcome p {
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           GAME CARDS
+        ========================= */
+
+        .section-title {
+            text-align: center;
+
+            margin: 45px 0 20px;
+
+            font-family: Georgia, serif;
+            color: #9c4f76;
+        }
+
+        .games {
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+            gap: 20px;
+        }
+
+        .game-card {
+            position: relative;
+
+            padding: 28px;
+
+            background: white;
+
+            border-radius: 24px;
+
+            border: 2px solid #f3cada;
+
+            text-align: center;
+
+            box-shadow: 0 8px 20px rgba(170, 100, 130, 0.08);
+
+            transition: 0.25s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow: 0 12px 30px rgba(170, 100, 130, 0.15);
+        }
+
+        .game-icon {
+            font-size: 55px;
+        }
+
+        .game-card h3 {
+            color: #9c4f76;
+
+            font-family: Georgia, serif;
+
+            font-size: 25px;
+        }
+
+        .game-card p {
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+
+            margin-top: 10px;
+
+            padding: 10px 22px;
+
+            border-radius: 999px;
+
+            background: #f49fc5;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: #db76a5;
+            transform: scale(1.04);
+        }
+
+
+        /* =========================
+           LITTLE NOTE
+        ========================= */
+
+        .note {
+            margin-top: 30px;
+
+            padding: 20px;
+
+            background: #fff0f6;
+
+            border: 1px dashed #e8a9c5;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            margin-top: 60px;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            background: #ffd8e8;
+
+            color: #8d6177;
+
+            font-size: 14px;
+        }
+
+        .footer-heart {
+            color: #df6e9e;
+        }
+
+        
+/* ♡ Next chapter box ♡ */
+
+.chapter-navigation {
+    max-width: 760px;
+    margin: 16px auto 35px;
+    padding: 14px 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    background: #fffafd;
+    border: 1px solid #f0dce8;
+    border-radius: 12px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    color: #9b7a8d;
+}
+
+.chapter-navigation a {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    color: #a65d89;
+    text-decoration: none;
+    text-align: right;
+    font-weight: bold;
+}
+
+.chapter-navigation a:hover {
+    color: #d68bb5;
+}
+
+.chapter-navigation small {
+    font-size: 11px;
+    font-weight: normal;
+    color: #9b7a8d;
+}
+
+@media (max-width: 600px) {
+    .chapter-navigation {
+        margin: 16px 12px 30px;
+        padding: 12px;
+    }
+}
+
+
+        h3 {
+            color: #5f4b58;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 17px;
+            line-height: 1.9;
+            font-style: italic;
+        }
+
+
+.translation {
+    max-width: 760px;
+    margin: 30px auto;
+    padding: 28px 32px;
+
+    background-color: #fffafd;
+    color: #5f4b58;
+
+    border: 1px solid #f0dce8;
+    border-radius: 16px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.9;
+
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+
+    box-shadow: 0 4px 14px rgba(160, 105, 140, 0.08);
+}
+
+@media (max-width: 600px) {
+    .translation {
+        margin: 20px 12px;
+        padding: 20px 18px;
+        font-size: 16px;
+        line-height: 1.85;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Twin Suns Blaz1ng!</h1>
+        <p>18TRIP Season 2 · Chapter 005</p>
+    </header>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="enstars.html">Ensemble Stars</a>
+
+        <a href="18trip.html">18TRIP</a>
+
+    </nav>
+
+    <main>
+
+        <h2>Chapter 005-A01 | Let’s get that star.</h2>
+
+        <div class="translation">
+        
+        <h3>Location: Inside Airplane ・ Passenger seats</h3>
+
+MC: Memories of a journey are just like one reel of a cassette tape.
+
+On side A, there are wonderful things,
+On Side B… sometimes, unavoidable painful things are recorded, and it can’t be pretended that either side never existed. 
+
+Now again, I am about to set out on a new journey.
+On this journey, what kind of scenery… and what kind of encounters will be recorded onto the cassette of my heart…? 
+
+Surely, I am looking forward to this journey, with just a little anxiety and lots of expectations—
+
+<h3>Location: Tokyo Ceremony Venue</h3>
+
+MC: (Whoa, it’s the new fiscal year's tourism special zone final review evaluation venue.
+It's full of important people. Not just the Tokyo ward mayors, but even the Minister of Tourism and the Prime Minister are here…!)
+
+Kafka: …Finally, this day has come, hasn't it?
+
+MC: Kafka… Yes, it finally has.
+
+(That's right. Today, finally, everything will be decided: whether HAMA can officially remain in the tourism special zone, and whether its review rating will rise from one star.) 
+
+(Since we've cleared the visitor-number hurdle, we shouldn't lose our special-zone status. Even knowing that, it's a large-scale ceremony with all the tourism special zones gathering together. I can't help feeling nervous.)
+
+Kafka: Honestly, Chief-chan. Even though I'm the one going up onto the stage, you’re the one who looks more nervous.
+
+MC: Because… when I think that today the results of what we've worked hard on for the past year… I just can't help tensing up.
+
+And you, Kafka? Aren't you nervous? You'll be called soon.
+Aren’t you worried? 
+
+Kafka: …
+
+Venue Announcement: “Next, we will proceed with the official certification of HAMA 18 Wards—”
+
+Kafka: Chief, I want to know something.
+
+MC: …?
+
+Kafka: That day… in that place. Don’t you regret taking my hand?
+
+MC: …!
+I don’t! I don’t regret it! 
+I’m glad I took your hand, Kafka!
+
+Kafka: …!
+I see. Then it’s okay now.
+
+Venue Announcement: “Ward 0 Mayor, Oguro Kafka, please come up to the stage.”
+
+Kafka: I’m still winning the gamble.
+So… I’m going up there with my head held high.
+
+MC: Yeah…!
+See you when you’re back, Kafka…!
+
+Kafka: “I have received the honor of being called here. I’m Oguro Kafka, Mayor of HAMA Ward 0.”
+
+MC: (Kafka. Everything’s going to be okay, right?
+Everything we’ve overcome together with everyone at HAMA Tours over the past year…)
+(It’s all going to pay off…!)
+
+Hakkei: “And now, the results will be announced by HAMA auditor Hakkei Shigematsu.
+HAMA Ward 18 is officially certified—”
+
+<h3>Location: HAMA House, Living Room.</h3>
+
+Hakkei: HAMA Ward 18 is officially certified—two stars! One-star up!
+
+Renga: …! We did it! We did it, everyone!
+We’re up a star!
+
+Ten: Haha. I’m glad, Renga.
+Well, we were pretty much guaranteed to stay in the special zone, though. 
+
+Shumai: Woof-woof!
+
+Renga: Shumai’s celebrating for us too!
+Hey, look, Kafka’s on the big screen giving a speech.
+
+Kafka: “HAMA won’t stop with this star upgrade. 
+We’ll aim even higher, next year we’ll aim for three stars, four stars… no, six stars.” 
+
+Shumai: Woof!! Woof-woof ♪ 
+
+Yukikaze: Kafuka looks so radiant on the screen, too. 
+As his older brother, I’m proud of him, too.
+
+I’m sure Chief is happy, too…
+Let’s prepare a feast to celebrate and welcome him home. 
+
+Liguang: Two stars. I suppose that'll do for now.
+If we're going to restore HAMA to its former glory, we should aim for further star upgrades this year.
+
+(I must also settle things with Kiba. But… restoring HAMA is also part of my duty as Lu Liguang, I suppose.) 
+
+Yachiyo: Congratulations…
+Well, I got held back another year, so it’s not much to celebrate, though…”
+
+Ushio: Hey, hey! Let’s hurry up and have a celebratory drink!
+I can’t wait, jump-hop–scare!! 
+
+Muneuji: …Mm. I’ll… help hand out the drinks.
+
+Nanaki: (Chief… I wish I could’ve celebrated by your side… 
+Would it be okay if I came to your room tonight to congratulate you?) 
+
+Muneuji: Not only did we manage to remain in the tourism special zone, but to achieve a star upgrade is a remarkable feat.
+As someone who also aims for stars, I want to engrave the feelings of today into my heart. 
+
+Ushio: Yes, yes. It’s good that we didn’t do worse than last time.
+So? Does this mean we’re stuck being ward mayors? I’ve got entrance exams this year, you know. 
+
+Nanaki: Why would you say something like that at a celebration?
+We only just had a star upgrade.
+
+Ushio: But you didn’t look like you were happy as a ward mayor, though? 
+
+Nanaki: Guh…!
+
+I-if you’re going to say that, don’t you realize that you’re the one making remarks inappropriate for the occasion because of your personal feelings?
+
+Ushio: Huh?
+
+Nanaki: What?
+
+Sakujiro: You two there!! Attention!
+
+Renga: Y-you two, stop fighting, okay?
+
+Nagi: A fight between high school students… It’s like a classic school drama about people with a long-standing, inseparable rivalry. I’m kind of jealous.
+
+Raito: Hahaha, both of them have a lot of energy.
+
+Sakujiro: See! The adults are also troubled by this, just like this!
+Teacher Saku-chan is mad too! Huff! Huff!
+
+As punishment… shall I go ahead and lock you in the “Room You Can’t Leave Until You Become Friends ~Saku’s Special Storage Room~”…? 
+
+Nanaki: …Ugh.
+
+Ushio: Ack!
+
+Ushio&Nanaki: We’ll go get the drinks!!!
+
+Raito: As far as I can tell from HAMA’s performance this year, I thought even a three-star rank-up might be possible, but… 
+We’ll have to aim for that next time.
+
+Kinari: When I searched past data, there were almost no cases of a star upgrade that skips one star. Star downgrades are the same. 
+
+Chihiro: Hnya? Kinyari~ Whatcha mean? 
+
+Kinari: It means there are no tourist destinations that rose while skipping one star, such as from one star to three stars, nor, conversely, are there generally sudden rank-downs, such as from five stars to three stars, Chihiro.
+
+Chihiro: I see~! Well then, to get the legendary six-star rank, we’ve gotta work steadily. We’re gonna do our best too! 
+
+Tao: Still, it’s something to celebrate. For Ev3ns, too, we’ve finally started being able to perform at fairly big venues… 
+
+Kuguri: Hehe, Maci. Can’t you be satisfied with the size you have now? Does that mean that unless it’s something bigger, it can’t satisfy you?
+
+Tao: …Um, could you stop using weird ways of saying things? I didn’t say anything like that. 
+
+Raito: Oh, Kuguri wants to perform at Hama Arena, huh? I agree, too. This year’s goal is a live show at Hama Arena! 
+
+Kuguri: Sigh… Won’t you stay quiet? Even the good mood I had gets ruined when I talk to you.
+
+Nayuki: You all, Kamina-san is preparing the meal alone. Please go and help.
+
+Raito: I see. As a former classmate, I have to be of help to Yukikaze.
+Leave it to me, Nayuki, I’ll pitch in and go help!
+
+Nayuki: Yes, yes. It’s unnecessary to report every little thing to me.
+
+(Well… on such a glorious, celebratory day for Kafka, perhaps I’ll refrain from nagging him too much.)
+
+(Congratulations, Kafka. As a friend, I’m truly happy.)
+
+Toi: Brother dearest~! They say we got a star upgrade! We’re happy, aren’t we? 
+
+Ryui: Yeah, that’s right, Toi. But the star for me has always been only you. Even today, you’re shining so brightly that you’re blinding. 
+
+Toi: Wow! Brother dearest, you’re the one who’s shining too brightly! The sparkly star for me is also only brother dearest! 
+
+Ryui: Toi…
+
+Toi: Brother dearest…
+
+Daniel: They’re the same as ever, those two.
+Though I’ve already gotten used to it. 
+
+Hey, Yodaka. This is a celebration, so naturally there’s alcohol too, right? 
+
+Yodaka: Of course. I made preparations for it yesterday.
+It would be bad to have the cute boys from the day shift carry it, so I’ll go get it myself. Danny, will you help me too?  
+
+Daniel: Heh heh! If it’s for alcohol, gladly. 
+Yodaka, let me drink the good alcohol first. 
+
+Nagi: ……Sigh. The feeling still hasn’t disappeared.
+To be able to celebrate the star upgrade together with everyone like this… such an incredible sense of unity… just like…
+
+(Like a family… Tonight, I have to prepare lots of flowers and give them to the Chief, or I might end up going crazy from happiness…) 
+
+Netaro: Gii~! Why are you sitting there completely silent~!
+
+Nagi: Netaro. What’s this you’ve got? 
+
+Netaro: Hehe. I heard everyone was getting together, so I prepared these.
+They’re the “temporarily turn your mind into a baby’s” meat buns and the “see an illusion of cat ears on people’s heads” meat buns that I’m still testing!! 
+
+Nagi: W-what dangerous things…
+
+Netaro: Humans like this kind of thing, don’t they?
+I saw it in the book Shio was secretly reading the other day. 
+
+Renga: Nagi!! I brought champagne. Let’s toast! Kotaro, you too! 
+
+Netaro: Oh, Renchi, good timing.
+Will you eat this meat bun? You’ll eat it, right? I’ll let you eat it.
+
+Liguang: Hey, Yowa. The food and drinks you bring in can’t be trusted.
+It would be a nuisance if an idiot became even more of an idiot. 
+
+Renga: Wha…! Liguang, you bastard, did you just call me an idiot!?
+
+Netaro: Ehh~ Even though it would liven things up… 
+
+Nagi: ……Netaro, I’ll give you that thing later, okay?
+Extra-large genereous special service.
+
+Netaro: ……Biiing!
+
+Gii, breaking your promise means you’ll get the pufferfish treatment! 
+
+Akuta: Ah! Renga, Nagi, there you are, there you are!
+For this galactic, historic, momentous toast, Raito, you too, let’s bring our glasses together as the Leaders! 
+
+Raito: Akuta made a passionate proposal that the leaders should start the first toast together. 
+
+Renga: …! That’s good! Just as expected of Akuta.
+
+Akuta: Heheh, well, I am destined to become a galaxy-famous film director, so I guess my eye for things is sharper than a shark’s teeth, you could say? 
+
+Nagi: Oh… this feels like a real team, and I feel the excitement of being the company’s gear number 16. 
+
+Raito: Alright, Renga, will you take the lead on behalf of the leaders? 
+
+Renga: Huh, me…!?
+F-for something like this, Raito would be better… 
+
+Akuta: The one who worked hard right at the very beginning here was Renga! 
+
+Nagi: Yeah. I also think Renga is the best suited person.
+
+Renga: ……~~!!
+
+Ten: (Haah, the dog looks happy.)
+
+Renga: Well then, since we’re at it…
+To the continuation of HAMA’s tourism special-zone status, and to the star upgrade… cheers!! 
+
+Everyone: Cheers!!
+
+Yachiyo: Uuuh~ It’s unfair that only Ten goes and secures a job at a major company, while saying things like ‘I’m just doing things half-heartedly’ … 
+
+Ten: Haha. But Yachiyo, you also received a job offer from HAMA TOURS, didn’t you?
+
+Yachiyo: I ended up repeating a year, so it fell through!
+I’m finally an eighth year student. This is my last chance… 
+
+Ten: Come to think of it, if you don’t graduate in eight years, you’re removed from the register, right?
+Well, do your best.
+
+Yachiyo: Ten! As the price for your betrayal, help me with my graduation thesis!
+If you don’t… I’ll go ahead and use the grudge-and-curse app… 
+
+Ten: Huh. What a pain.
+
+Yukikaze: Liguang, these are new shumai I tried making today. Would you try eating them?
+I want to make the Chief and Kafka happy when they will be coming back from the ceremony. 
+
+Liguang: Yeah. Not bad.
+They’ll probably be pleased to receive them. 
+
+Yukikaze: If you’re the one saying it, then it’s true.
+I’m glad I asked you to try it.
+
+Liguang: ……You should soon sit down and take it easy, too.
+You work too much for other people’s sake. 
+
+Yachiyo: Ah, booooss! 
+Ten is bullying meee~! 
+
+Liguang: …Ugh.
+
+Raito: (……Hm? Renga isn’t here.
+Until just a little while ago, he was in the middle, celebrating, but……)
+
+<h3>Location: HAMA House, Backyard</h3>
+
+Renga: ……Phew.
+
+(Kafka’s speech on TV was impressive.
+He said that he was still aiming even higher.
+I’ve gotta work hard too……)
+
+<h3>Flashback</h3>
+
+Raito: Alright, Renga, will you take the lead on behalf of the leaders?
+
+Akuta: The one who worked hard right at the very beginning here was Renga! 
+
+Nagi: Yeah. I also think Renga is the best suited person.
+
+<h3>Location: HAMA House, Backyard</h3>
+
+Renga: (But… is it okay for me to stay here and continue to be ward mayor?
+
+(Kafka is aiming for a star upgrade. But with my abilities, I probably wouldn’t be of much help with that… and, to begin with…)
+
+I don’t even know anymore whether Kiba wants me to keep being ward mayor…
+
+(If only I could know Kiba’s feelings…)
+</div>
+
+
+<div class="chapter-navigation">
+    <span>♡ Continue reading ♡</span>
+    <a href="chapter-005-A02.html">
+        Next chapter →
+        <small>Chapter 005-A02</small>
+    </a>
+</div>
+
+
+    </main>
+
+    <footer>
+
+        Made with
+        <span class="footer-heart">♥</span>
+        by (@bpdbnnuy_)
+
+        <br><br>
+
+        Chii-chan's Lovebox · 2026
+
+    </footer>
+
+</body>
+</html>
