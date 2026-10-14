@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>18TRIP — Chapter 005-A01</title>
+
+    <style>
+        /* =========================
+           GENERAL PAGE
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background: #fff4fa;
+            color: #5f4b58;
+        }
+
+        .links {
+            height: auto;
+        }
+        
+        .links a {
+            color: #5f4b58;
+        }
+
+
+
+        /* =========================
+           TOP DECORATION
+        ========================= */
+
+        .top-decoration {
+            height: 14px;
+            background: repeating-linear-gradient(
+                45deg,
+                #ff9fc8,
+                #ff9fc8 12px,
+                #ffd2e5 12px,
+                #ffd2e5 24px
+            );
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            text-align: center;
+            padding: 55px 20px 40px;
+
+            background:
+                radial-gradient(circle at 20% 30%, #ffffff 0 3px, transparent 5px),
+                radial-gradient(circle at 80% 30%, #ffffff 0 3px, transparent 5px),
+                #ffc6df;
+
+            border-bottom: 4px solid #f39abd;
+        }
+
+        .heart {
+            font-size: 42px;
+        }
+
+        h1 {
+            margin: 8px 0 5px;
+
+            font-family: Georgia, serif;
+            font-size: clamp(38px, 8vw, 70px);
+
+            color: #9c4f76;
+
+            text-shadow: 3px 3px 0 #fff;
+        }
+
+        .subtitle {
+            margin: 0;
+            font-size: 17px;
+            letter-spacing: 1px;
+            color: #8d6177;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            padding: 16px;
+
+            background: #fff;
+            border-bottom: 1px solid #f2cada;
+        }
+
+        nav a {
+            text-decoration: none;
+
+            padding: 9px 18px;
+
+            border-radius: 999px;
+
+            color: #9c4f76;
+            background: #fff0f6;
+
+            border: 1px solid #f3c3d8;
+
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background: #ffc6df;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        main {
+            width: min(1000px, 92%);
+            margin: 40px auto;
+        }
+
+        .welcome {
+            text-align: center;
+
+            background: white;
+
+            padding: 35px 25px;
+
+            border-radius: 25px;
+
+            border: 2px solid #f5c9dc;
+
+            box-shadow: 0 8px 25px rgba(170, 100, 130, 0.08);
+        }
+
+        .welcome h2 {
+            margin-top: 0;
+
+            color: #a34f78;
+            font-family: Georgia, serif;
+        }
+
+        .welcome p {
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           GAME CARDS
+        ========================= */
+
+        .section-title {
+            text-align: center;
+
+            margin: 45px 0 20px;
+
+            font-family: Georgia, serif;
+            color: #9c4f76;
+        }
+
+        .games {
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+            gap: 20px;
+        }
+
+        .game-card {
+            position: relative;
+
+            padding: 28px;
+
+            background: white;
+
+            border-radius: 24px;
+
+            border: 2px solid #f3cada;
+
+            text-align: center;
+
+            box-shadow: 0 8px 20px rgba(170, 100, 130, 0.08);
+
+            transition: 0.25s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow: 0 12px 30px rgba(170, 100, 130, 0.15);
+        }
+
+        .game-icon {
+            font-size: 55px;
+        }
+
+        .game-card h3 {
+            color: #9c4f76;
+
+            font-family: Georgia, serif;
+
+            font-size: 25px;
+        }
+
+        .game-card p {
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+
+            margin-top: 10px;
+
+            padding: 10px 22px;
+
+            border-radius: 999px;
+
+            background: #f49fc5;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: #db76a5;
+            transform: scale(1.04);
+        }
+
+
+        /* =========================
+           LITTLE NOTE
+        ========================= */
+
+        .note {
+            margin-top: 30px;
+
+            padding: 20px;
+
+            background: #fff0f6;
+
+            border: 1px dashed #e8a9c5;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            margin-top: 60px;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            background: #ffd8e8;
+
+            color: #8d6177;
+
+            font-size: 14px;
+        }
+
+        .footer-heart {
+            color: #df6e9e;
+        }
+
+        
+/* ♡ Next chapter box ♡ */
+
+.chapter-navigation {
+    max-width: 760px;
+    margin: 16px auto 35px;
+    padding: 14px 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    background: #fffafd;
+    border: 1px solid #f0dce8;
+    border-radius: 12px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    color: #9b7a8d;
+}
+
+.chapter-navigation a {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    color: #a65d89;
+    text-decoration: none;
+    text-align: right;
+    font-weight: bold;
+}
+
+.chapter-navigation a:hover {
+    color: #d68bb5;
+}
+
+.chapter-navigation small {
+    font-size: 11px;
+    font-weight: normal;
+    color: #9b7a8d;
+}
+
+@media (max-width: 600px) {
+    .chapter-navigation {
+        margin: 16px 12px 30px;
+        padding: 12px;
+    }
+}
+
+
+        h3 {
+            color: #5f4b58;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 17px;
+            line-height: 1.9;
+            font-style: italic;
+        }
+
+
+.translation {
+    max-width: 760px;
+    margin: 30px auto;
+    padding: 28px 32px;
+
+    background-color: #fffafd;
+    color: #5f4b58;
+
+    border: 1px solid #f0dce8;
+    border-radius: 16px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.9;
+
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+
+    box-shadow: 0 4px 14px rgba(160, 105, 140, 0.08);
+}
+
+@media (max-width: 600px) {
+    .translation {
+        margin: 20px 12px;
+        padding: 20px 18px;
+        font-size: 16px;
+        line-height: 1.85;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Twin Suns Blaz1ng!</h1>
+        <p>18TRIP Season 2 · Chapter 005</p>
+    </header>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="enstars.html">Ensemble Stars</a>
+
+        <a href="18trip.html">18TRIP</a>
+
+    </nav>
+
+    <main>
+
+        <h2>Chapter 005-A02 | Rival Challenger, Wassup!</h2>
+
+        <div class="translation">
+        
+        <h3>Location: HAMA House, Kitchen</h3>
+
+        MC: (Hah! The morning of the day after the star upgrade, and my mood is the best!
+Even helping serve the breakfast rice is fun.) 
+
+Yukikaze: Chief. You look happy. Your lips are all soft and squishy.
+Very adorable.
+
+MC: Huh? I was making that kind of face?!
+I’m just so happy I can’t stop grinning…
+
+Yukikaze: No, even if I saw it for a lifetime, I wouldn’t get tired of it. Keep smiling like that, always.
+For me.
+
+Kafka: Hey. Could you stop saying weird things and not trouble the Chief? 
+
+Yukikaze: Kafka, of course your smile is adorable, too.
+I want you to keep smiling for the rest of your life, too. That’s what your big brother wishes.
+
+Kafka: How did we even get to that?
+Well… since we're in a celebratory mood now, and Chief looks happy and cute, I’ll let you get away with acting like an older brother. 
+
+Yukikaze: Ah, Kafka… Have you finally begun to recognize yourself as my little brother, too…? 
+
+Kafka: Ugh, seriously!! You really are annoying!
+Here, I’ve served the rice! This is okay now, right?
+
+Yukikaze: It’s spilling out of the rice bowl, but even that is cute, Kafka. 
+
+Kafka: Ugh… I’ll get better at it once I get the hang of it…
+
+MC: (Hehe… I was worried because Yuki-nii had been out of sorts, but perhaps because it’s the day after the star upgrade, he seems energetic today, so I’m glad.)
+
+Kafka: ……Um, that aside, what’s going on with your leg? 
+
+Yukikaze: Kafka…
+
+Akuta: Thank you for the meal! Well then, we’re going!
+
+MC: Ah, Akuta and everyone, wait, wait.
+There are lunch boxes that Yuki-nii made for you. 
+
+<h3>Location: HAMA House, Entrance</h3>
+
+Muneuji: Kamina thought of everything again.
+I am most grateful.
+
+MC: Yeah. He says it’s a celebratory bento. There are portions for everyone. 
+
+Kiroku: Thank… you very much.
+
+Ushio: Honestly, doesn’t that guy have better things to do than cook? 
+
+Nanaki: Why can’t you just say “thank you”?
+Everyone’s happy, so do you really have to ruin the mood?
+
+Ushio: Hah?
+
+Muneuji: Nanaki, what U-chan was trying to say is that he’s terribly worried about Kamina. 
+
+Ushio: Hey! Muu-chan!
+
+Akuta: Hey, hey! We got lunch boxes, so let’s meet up on the rooftop at lunchtime! 
+
+MC: (They left together, even if they were bickering the whole way…
+Hehe, they look like they’re having fun. I’m glad.)
+
+Ten: Chief, good morning.
+What’s up? Why are you just standing in the entrance?
+
+MC: Oh, Ten. You’re heading to work now, right?
+
+(Ten in a suit… I’ve seen him dressed like this a few times, but I’ve always thought of him as a college student, so it feels a little surreal… But it really suits him.). 
+
+I have no idea what it’s like working at a huge trading company like that, but good luck! You’ve got this! 
+
+Ten: Haha. Well, I only got into the company by a stroke of luck, really.
+I’ve gotta hang onto it, you know.
+
+(Actually, this is a long-term job, so for the foreseeable future I’ll be going back and forth between the trading company and here, juggling both jobs.)
+
+Yukikaze: Wait a moment, Ten. You seem to be short on time today, but is there anything you’d like for breakfast tomorrow?
+
+Ten: …Ahh, then, french toast.
+I can eat it quickly.
+
+Yukikaze: Understood. I’ll prepare honey, too.
+If I remember correctly, there’s some in the seasoning cupboard…
+
+MC: The morning group is all taken care of. I guess I’d better get ready for work, too.
+
+Shumai: Woof…
+
+MC: Hm? Shumai, what’s wrong? You’re making a stern face. 
+
+???: What’s up, bro!
+
+MC: Waaah!? Who!?
+
+Kafka: Chief, what’s wrong?!
+
+Yukikaze: An enemy attack!? Chief, Kafka, get behind me.
+Big brother will protect you…!
+
+???: Don’t say things that make me look bad~
+
+MC: You are…
+
+Koharu: I request an audience! KOBE 0 Ward Mayor, Tengen Koharu has arrived! …Something like that. 
+
+MC: W-why is Koharu here—?! 
+
+<h3>Location: HAMA House, Meeting Area</h3>
+
+Yachiyo: Eeeek… What is this first thing in the morning?
+What is this, a ‘good-morning arrest’? You’re scaring an ordinary little citizen like me.
+
+Daniel: Yaaawn~
+Give me a break, I’m still half-asleep.
+
+Sakujiro: Everyone, please have some coffee to shake off your sleepiness.
+This is one of the 777 indispensable butler’s tools passed down through the Ōguro family. It contains a potent extract that’ll have you wide awake in a single gulp. 
+
+Nayuki: You went out of your way from KOBE… to come all the way here. Is there some reason?
+
+Kafka: ……
+
+Koharu: Well, now, don’t make such a scary face.
+You already know what’s going on, don’t you?
+
+The young master of the Kitakata conglomerate, Kitakata Nayuki ♪ 
+
+MC: (The situation…? Do they mean the thing at yesterday’s ceremony?)
+
+Flashback
+
+Hakkei: “KOBE Ward 9 is officially certified at two stars.”
+
+Koharu: ……
+
+Attendee A: W-what does this mean? Does this mean KOBE has suddenly dropped to three stars from five stars?
+
+Attendee B: No way… That can’t be right. And the person making the certification is the Tokyo Ward 8 Mayor? I thought KOBE’s auditor was supposed to be a different ward mayor…
+
+Hakkei: “Ah… I am the ward chief serving as KOBE’s auditor, as the previous one resigned the other day.
+Since the resignation was so sudden, I, Hakkei Shigematsu, have been appointed to serve as a temporary auditor.“
+
+MC: K-Kafka. Is something like this allowed?
+
+Kafka: …No. This is the first time in history since JPN began focusing on the tourism industry and established the special-zone system.
+
+(I had received a report from Sakujiro about the sudden resignation of the Tokyo Ward Mayor, but… I never imagined that they had been KOBE’s auditor. And on top of that, the reviews dropped sharply.)
+
+(With Tengen Koharu involved, for something like this to happen… There must have been some extraordinary circumstances.)
+
+Koharu: I humbly accept the results. 
+
+MC: (……! Koharu isn’t shaken at all… But deep down, surely he’s shocked… right?)
+
+</h3>Location: HAMA House, Meeting Area</h3>
+
+MC: (It was a real shock at the venue. The people around us were murmuring, too.  And I never would’ve imagined that Mr. Hakkei, the same auditor we have, would be taking over, even if temporarily.)
+
+Koharu: We’re currently at two stars in tourism reviews. In other words, we’re the same as you.
+Kuhaha! Glad we match now ♪
+
+Kafka: Would you stop lumping a historic star downgrade and a steady star upgrade together? 
+
+Koharu: You have a point.
+But, you know, I’m enjoying the current situation.
+
+MC: …You’re enjoying…this?
+
+(Even though they dropped from five stars…? That’s not his true feelings, right?)
+
+Koharu: Well, now. For the time being, ta-daa! Look at this.
+
+Nayuki: What is this?
+
+Koharu: It’s my secret playbook! Because I’m Koharu!
+   > Koharu uses the phrase “tiger’s scroll” and there is a play on words with his name since the 虎 kanji stands for tiger.
+
+Kafka: Looks like a proposal plan, doesn’t it?
+
+Yachiyo: Uhhh… shiver. This is kind of scary. Can I stay out of this? 
+
+Sakujiro: Well then, allow me, Saku, to have the honor of reading it aloud.
+
+“The one move to bring KOBE Ward 9 back from the bottom is!!”
+“KOBE × HAMA, the dream collaboration tour!!!”
+
+That is what it says, yes.
+
+Nayuki: A collaboration tour. I see… Is this an offer to join forces? 
+
+Daniel: Doesn’t it seem kind of troublesome?
+
+Kafka: ……
+
+MC: (Ah. I’m so surprised that I can’t react. A collaboration with KOBE? All of a sudden…?)
+
+Kafka: ...I can more or less tell what kind of plan this is, but there’s no particular benefit for HAMA. I’ll decline. 
+
+Koharu: Kuhaha, at least pretend to think about it.
+Right? Right? Oguro Kafka~ I’m begging you~~
+
+Kafka: Honestly… I can’t completely trust you.
+Or are you going to tell me the reason for that drastic downgrade?
+
+Koharu: ……
+
+Nayuki: Certainly, the way it suddenly dropped is abnormal.
+If there aren’t problems internally, this is an unreasonable line of action… 
+
+Koharu: ...You’re a clever kid, aren’t you.
+How about I recruit you to work for me? Kitakata Nayuki. 
+
+MC: Huh.
+
+Nayuki: No, thank you.
+
+Kafka: ……
+
+(...There’s no doubt they came to us because we have some value to them, but I can’t believe someone of Koharu’s caliber would want to do just  a simple collaboration.) 
+
+Koharu: Kafka. You’re the type who likes gambling.
+Bet on me for once. It’ll be fun, you know?
+
+Kafka: Unfortunately, I’m the sort of person who doesn’t make bets I don’t feel inclined to take.
+
+Koharu: What’s the matter? You’re playing it safe now.
+
+Kafka: ……
+
+Koharu: ……
+
+Koharu: Well, then, for now, let’s say I’ve come to have HAMA, which is riding a wave of success at the moment, to teach me a thing or two.
+
+Won’t you let me stay in the dormitory? I want to stay for a long time.
+
+Kafka: There’s no way we can let you do that…
+
+Yachiyo: Well, we do have spare rooms, but for the KOBE ward chief to stay overnight is a bit much… 
+
+Sakujiro: Fuefuki.
+
+Koharu: Oh, If there are rooms to spare, then it’s fine. I’ll obviously pay the utility costs and lodging fees.
+
+Yachiyo: H-huh… Did I do something wrong again?
+
+Koharu: Kafka, you said it too. That next, Hama was meant to come to KOBE to study. So you wouldn’t treat us coldly, right? 
+
+Kafka: That’s a different matter—
+
+Koharu: What’s wrong, is there something you’re worried about me seeing?
+Are you perhaps worried that KOBE willtake everything away from you? The genius Oguro Kafka?
+
+Kafka: ……
+
+Koharu: Don’t look at me with those scary eyes~
+The hotels in HAMA are really popular, as expected, and they’re all fully booked.
+Isn’t it sad to let me sleep outside? Sniff sniff.
+
+MC: Um, well… Kafka.
+
+I think it would be fine if he stayed over.
+Well… I owe Koharu a favor from before, when he lent me his weather control device…
+
+Koharu: ! Oh, that’s right.
+Hey, keep that a secret, or you’ll get in big trouble.
+
+MC: (I’m definitely going to get scolded…!)
+
+Kafka: Sigh… Okay, I get it.
+
+Fine, you can stay the night.
+You’re probably going to keep insisting even if I refuse.
+Sakujiro, please arrange a spare room for him.
+
+Sakujiro: Yes, president.
+Mr. Tengen, please come this way.
+
+Koharu: Mh? A key?
+
+“IntenseGoGo”? What the heck is this name!
+Kuhahahahaha! My stomach hurts…!
+
+Kafka: ……
+
+(Sakujiro.)
+
+Sakujiro: Yes, young master. I understand.
+
+Koharu: I see. The room names here were inspired by the twelve zodiac animals. So that’s why they have these absurd names.
+
+In any case, Chief, thanks for showing me around ♪ 
+
+MC: It’s nothing, although I’m not sure this really makes up for the help you gave me before. 
+
+Koharu: ……
+
+(...Kafka’s close confidant. They have great enthusiasm for their work and are a good kid. As for their personality, they’re the type who embodies goodness itself.)
+
+Come to think of it, right now, is Nishizono Renga in the dormitory?
+
+MC: Huh? Renga?
+He’s out for work right now. Why?
+
+Koharu: Hm? Well, I just wanted to see him.
+He’s a celebrity after all, right?
+
+MC: (When I saw him in KOBE before, he didn’t seem that interested in Renga… Was I wrong?)
+
+Koharu: By the way, Chief, if you have some time, could you show me around HAMA?
+
+Let me take a good look at what you guys took from KOBE.
+Of course, you should know this city better than anyone, right?
+
+MC: ……!
+
+(This is… a test of my skills as a guide and my love for HAMA…!?)
+
+If you say so, I can’t refuse to show you around.
+Of course…! I’ll bet my tour guide soul on making Koharu happy!!
+
+Koharu: Ah, that sounds fun.
+
+(First, let’s see what you’ve got. And while we’re at it…)
+
+(It’d be fun to get this kid on our side ♪)
+
+</div>
+
+
+<div class="chapter-navigation">
+    <a href="chapter-005-A01.html">
+        Previous chapter ←
+        <small>Chapter 005-A01</small>
+    </a>
+    <a href="chapter-005-A03.html">
+        Next chapter →
+        <small>Chapter 005-A03</small>
+    </a>
+</div>
+
+    </main>
+
+    <footer>
+
+        Made with
+        <span class="footer-heart">♥</span>
+        by (@bpdbnnuy_)
+
+        <br><br>
+
+        Chii-chan's Lovebox · 2026
+
+    </footer>
+
+</body>
+</html>
