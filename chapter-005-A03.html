@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>18TRIP — Chapter 005-A03</title>
+
+    <style>
+        /* =========================
+           GENERAL PAGE
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background: #fff4fa;
+            color: #5f4b58;
+        }
+
+        .links {
+            height: auto;
+        }
+        
+        .links a {
+            color: #5f4b58;
+        }
+
+
+
+        /* =========================
+           TOP DECORATION
+        ========================= */
+
+        .top-decoration {
+            height: 14px;
+            background: repeating-linear-gradient(
+                45deg,
+                #ff9fc8,
+                #ff9fc8 12px,
+                #ffd2e5 12px,
+                #ffd2e5 24px
+            );
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            text-align: center;
+            padding: 55px 20px 40px;
+
+            background:
+                radial-gradient(circle at 20% 30%, #ffffff 0 3px, transparent 5px),
+                radial-gradient(circle at 80% 30%, #ffffff 0 3px, transparent 5px),
+                #ffc6df;
+
+            border-bottom: 4px solid #f39abd;
+        }
+
+        .heart {
+            font-size: 42px;
+        }
+
+        h1 {
+            margin: 8px 0 5px;
+
+            font-family: Georgia, serif;
+            font-size: clamp(38px, 8vw, 70px);
+
+            color: #9c4f76;
+
+            text-shadow: 3px 3px 0 #fff;
+        }
+
+        .subtitle {
+            margin: 0;
+            font-size: 17px;
+            letter-spacing: 1px;
+            color: #8d6177;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            padding: 16px;
+
+            background: #fff;
+            border-bottom: 1px solid #f2cada;
+        }
+
+        nav a {
+            text-decoration: none;
+
+            padding: 9px 18px;
+
+            border-radius: 999px;
+
+            color: #9c4f76;
+            background: #fff0f6;
+
+            border: 1px solid #f3c3d8;
+
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background: #ffc6df;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        main {
+            width: min(1000px, 92%);
+            margin: 40px auto;
+        }
+
+        .welcome {
+            text-align: center;
+
+            background: white;
+
+            padding: 35px 25px;
+
+            border-radius: 25px;
+
+            border: 2px solid #f5c9dc;
+
+            box-shadow: 0 8px 25px rgba(170, 100, 130, 0.08);
+        }
+
+        .welcome h2 {
+            margin-top: 0;
+
+            color: #a34f78;
+            font-family: Georgia, serif;
+        }
+
+        .welcome p {
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           GAME CARDS
+        ========================= */
+
+        .section-title {
+            text-align: center;
+
+            margin: 45px 0 20px;
+
+            font-family: Georgia, serif;
+            color: #9c4f76;
+        }
+
+        .games {
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+            gap: 20px;
+        }
+
+        .game-card {
+            position: relative;
+
+            padding: 28px;
+
+            background: white;
+
+            border-radius: 24px;
+
+            border: 2px solid #f3cada;
+
+            text-align: center;
+
+            box-shadow: 0 8px 20px rgba(170, 100, 130, 0.08);
+
+            transition: 0.25s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow: 0 12px 30px rgba(170, 100, 130, 0.15);
+        }
+
+        .game-icon {
+            font-size: 55px;
+        }
+
+        .game-card h3 {
+            color: #9c4f76;
+
+            font-family: Georgia, serif;
+
+            font-size: 25px;
+        }
+
+        .game-card p {
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+
+            margin-top: 10px;
+
+            padding: 10px 22px;
+
+            border-radius: 999px;
+
+            background: #f49fc5;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: #db76a5;
+            transform: scale(1.04);
+        }
+
+
+        /* =========================
+           LITTLE NOTE
+        ========================= */
+
+        .note {
+            margin-top: 30px;
+
+            padding: 20px;
+
+            background: #fff0f6;
+
+            border: 1px dashed #e8a9c5;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            margin-top: 60px;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            background: #ffd8e8;
+
+            color: #8d6177;
+
+            font-size: 14px;
+        }
+
+        .footer-heart {
+            color: #df6e9e;
+        }
+
+        
+/* ♡ Next chapter box ♡ */
+
+.chapter-navigation {
+    max-width: 760px;
+    margin: 16px auto 35px;
+    padding: 14px 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    background: #fffafd;
+    border: 1px solid #f0dce8;
+    border-radius: 12px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    color: #9b7a8d;
+}
+
+.chapter-navigation a {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    color: #a65d89;
+    text-decoration: none;
+    text-align: right;
+    font-weight: bold;
+}
+
+.chapter-navigation a:hover {
+    color: #d68bb5;
+}
+
+.chapter-navigation small {
+    font-size: 11px;
+    font-weight: normal;
+    color: #9b7a8d;
+}
+
+@media (max-width: 600px) {
+    .chapter-navigation {
+        margin: 16px 12px 30px;
+        padding: 12px;
+    }
+}
+
+
+        h3 {
+            color: #5f4b58;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 17px;
+            line-height: 1.9;
+            font-style: italic;
+        }
+
+
+.translation {
+    max-width: 760px;
+    margin: 30px auto;
+    padding: 28px 32px;
+
+    background-color: #fffafd;
+    color: #5f4b58;
+
+    border: 1px solid #f0dce8;
+    border-radius: 16px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.9;
+
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+
+    box-shadow: 0 4px 14px rgba(160, 105, 140, 0.08);
+}
+
+@media (max-width: 600px) {
+    .translation {
+        margin: 20px 12px;
+        padding: 20px 18px;
+        font-size: 16px;
+        line-height: 1.85;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Twin Suns Blaz1ng!</h1>
+        <p>18TRIP Season 2 · Chapter 005</p>
+    </header>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="enstars.html">Ensemble Stars</a>
+
+        <a href="18trip.html">18TRIP</a>
+
+    </nav>
+
+    <main>
+
+        <h2>Chapter 005-A03 | The Best In This World</h2>
+
+        <div class="translation">
+        
+        <h3>Landmark Plaza Observation Deck</h3>
+
+        MC: The area covered by the morning group R1ze is a popular tourist spot.
+It’s full of the history of HAMA.
+
+<h3>Location: Chinatown</h3>
+
+MC: The ward mayors have each created attractive tours, bringing a breath of fresh air and allowing people to rediscover the charm of the existing traditions, which is leading to repeated visits!
+
+Koharu: …Fishing spots, fish markets, ice shows, observation decks.
+And flower calligraphy in Chinatown.
+
+<h3>Location: Kamina Ice Arena</h3>
+
+MC: During the tour, customers who developed a strong connection to the area choose an honorary resident badge each, and some even return to visit again, wanting to collect badges for every single area…
+
+(Talking about it like this makes me remember our first tour.)
+
+<h3>Flashback</h3>
+
+Tourist C: …Beautiful.
+
+Tourist D: The sun is rising from the sea…?
+
+<h3>Location: Kamina Ice Arena</h3>
+
+MC: (The HAMA surprise performance that Renga came up with…
+I remember thinking Renga was like the sun back then.)
+
+<h3>Location: HAMA Tours, Back Pier</h3>
+
+Koharu: Thanks for the tour. I understand much better now.
+HAMA is definitely different from before.
+More than anything, the eyes of the visitors were sparkling with excitement.
+
+Also, I could really tell that the Chief loves this town.
+
+MC: Haha. That’s right!
+Oh, you can see the ocean really well from here. It’s a recommended spot.
+
+…I’ve always loved the sea at HAMA the most.
+
+Koharu: …I see.
+Isn’t the Chief from HAMA?
+
+MC: Yes! Although when I was little,
+I followed my parents, who had jobs that required them to travel all over the world.
+I spent most of the time moving from place to place.
+
+So, I spent a lot of time outside of HAMA…
+
+Koharu: Oh, is that so. I used to be a backpacker.
+Back then, flying around here and there all over the world was really fun.
+
+MC: Wow! Really? Being a backpacker sounds great!
+
+Koharu: A stream of unfamiliar places and experiences,
+It was incredibly fun.
+
+MC: I’m so jealous…! Actually, I’ve always wanted to try it.
+Are there any places that left a strong impression on you?
+
+Koharu: Hmm, there’s more than enough, actually…
+
+……
+
+Yeah, there were a lot of exciting things, but there are sights I’ve seen without even knowing why.
+
+MC: Sights you saw without knowing why?
+
+Koharu: Mhm. I once waited for a herd of caribou in the tundra.
+
+MC: Caribou… that’s a reindeer, right?
+Hundreds of thousands of animals migrate across the Arctic Circle…
+
+(I’ve seen it before in my dad’s photo…
+It was so magnificent, I really wanted to see it up close.)
+
+Koharu: On  a whim, I joined some indigenous people who made a living by hunting caribou.
+
+MC: …The Gwich’in tribe, right? I’ve heard about them from my father.
+They’re people who have lived alongside caribou for hundreds, even thousands of years.
+
+Koharu: Yeah, I was allowed to join their camp, but we weren’t encountering any herds, so I was getting bored and thought about leaving. But……
+
+Every time I thought about going home, the starry sky was so beautiful.
+
+Looking at the sky every night doesn’t fulfill my goal as a backpacker, to see one new sight every time, and it’s inefficient.
+
+But the starry sky was so beautiful, I couldn’t bring myself to go home…
+It was so beautiful I just had to stay.
+
+In the end, after waiting and waiting, when I finally saw the herd– I was so moved.
+
+The Earth is alive. That’s what I thought. 
+
+MC: ……
+
+Koharu: Through the immense nature of the tundra, tens of thousands of caribou pass by like waves.
+
+A clash between lives.
+I felt the surging vitality there… within that swell of life, I felt, as cliché as it sounds… so small.
+
+That was the first time I’d felt like that.
+
+MC: (Though I haven’t seen it myself… I feel like I understand. Something that goes beyond words, something vast beyond the limits of imagination.) 
+
+…I also saw a herd of caribou from my father’s photographs.
+The photos alone were incredibly powerful, to the point of leaving me speechless.
+
+Koharu: Oh, really. That’s so touching.
+
+…But even if it’s not quite as magnificent, I also like the city of KOBE.
+
+MC: I understand! Me too, more than any remote place…
+I love HAMA.
+
+(About Koharu… I thought he was a shrewd inscrutable person, but maybe we have more in common than I expected.)
+
+Even when I was working overseas, I always had HAMA on my mind. Was that the reason you returned to KOBE, Koharu?
+
+Koharu: Hmm, originally, back when I was in my teens, I had been involved in KOBE’s urban development. I was the project leader, and I completely overhauled the old system.
+
+MC: …Overhauled?
+
+Koharu: Since KOBE’s IR world at the time had rotted completely, I wanted to sweep it all away and make it new.
+
+MC: ……
+
+(The IR world… isn’t that the world of integrated resorts?)
+
+(W-what… the scale is huge!?)
+
+Koharu: Well… doing that wasn’t all good either.
+
+But after I finished clearing everything up, I was able to enjoy backpacking in a great mood.
+And before I knew it, KOBE had fallen into decline.
+
+I had no choice but to come back, quickly got rid of my predecessor, and became the Ward Mayor 0.
+
+MC: Wow, that’s an impressive background…
+
+(There seemed to be some unsettling wording there…)
+
+B-but that was all for the sake of KOBE, right?
+
+Koharu: Haha. Of course that’s a big part.
+But not only that…
+
+I want to become Prime Minister.
+
+MC: ……!?
+
+Prime Minister. The minister.
+
+Koharu: Yes, the Prime Minister.
+
+MC: (Indeed, it’s a fairly standard career path for someone who made a name for themself as the head of a tourist district to become the Minister of Tourism, and then Prime Minister.)
+
+I’ve never met anyone who spoke so frankly before…
+
+Koharu: There’s no point in hiding it.
+If I run for office, I’d appreciate your vote.
+
+MC: (Haha… I thought we might have had something in common until now.
+I could never have such a big dream…)
+
+Koharu: If I become Prime Minister, I’ll see sights I’ve never seen before, and more.
+You get it, right? I want to experience something even bigger…
+
+I need to make JPN the best country in the universe. I want it to be a passionate and prosperous nation.
+And I want to make everyone as happy as possible.
+
+MC: Happy…?
+
+Koharu: ……
+
+The thing is, I..
+I don’t really understand things like other people’s feelings.
+
+MC: Eh…
+
+Koharu: Kaha, were you put off?
+
+MC: Huh? No! I’m not put off, but I wonder why you told me…
+
+Koharu: ……
+
+Chief, let’s go for a walk.
+
+<h3>Location: In front of the brick warehouse</h3>
+
+MC: (...Koharu, you don’t understand people’s feelings…
+I wonder what that means? I always picture Koharu as… cheerful and easygoing)
+
+Koharu: Like I said earlier, I am, how should I put it.
+I’m a person with little emotion.
+
+MC: Emotionally stunted.
+
+Koharu: Yeah. When it comes to emotions, I’m especially weak to anger and sadness. I can understand when people are angry or sad, but I find it difficult to empathize.
+
+MC: ……
+
+Koharu: Ever since I realized as a child that what I felt wasn’t normal, I’ve tried to understand what made people around me happy and what made them angry, in order to survive… Whether they were sad or happy, I wanted to know.
+
+So, for me, all of humanity is a textbook.
+
+MC: ……
+
+Koharu: Emotions and values I don’t yet know. Everyone who has them is, to me, like an interesting book.
+I thought about things like this, felt things like this…
+
+But no matter how much I learn, know, or understand, I probably won’t ever feel the same way.
+
+MC: !
+
+Koharu: I guess that’s why things similar to emotions, which I can feel only once in a while, are extremely important to me.
+
+Even to someone like me, when I see a herd of caribou, unfamiliar emotions can arise.
+
+If something I do makes someone happy, it makes me feel really good.
+
+So, honestly, I want to improve KOBE and JPN.
+For me, these kinds of feelings are hard to come by.
+
+MC: (Somehow… it feels like Koharu is telling me things about his completely unguarded self… who he really is…)
+
+Koharu: Haha. It’s strange, I know.
+I had thought of speaking honestly with Chief, but… I ended up revealing more than I had planned.  
+
+MC: Eh…
+
+Koharu: I wonder why. Maybe it’s because I can tell that Chief is a genuine person. 
+It makes me want to solve the puzzle. The textbook that Chief is… 
+
+MC: Eh, no no, I’m ordinary, so I’m not the kind of textbook you think I am, Koharu! 
+
+Koharu: Kuhaha.
+
+MC: ……
+
+Then… it must have been a real shock, after all.
+KOBE’s star downgrade…
+
+(Especially if he wants to make the people around him happy…)
+
+Koharu: No? Not at all.
+
+MC: Eh!?
+
+Koharu: Kuhaha! Chief, you really are a good person after all.
+I told you, didn’t I? That I don’t feel things like anger or sadness.
+
+If anything… I got really excited ♪ 
+
+MC: E-excited…!? About the star downgrade…!? 
+
+Koharu: When you get to be someone like me, things proceed within expectations no matter what.
+Because I'm aiming to become the youngest prime minister, there's also the fact that right now I prioritize moving at the fastest speed.
+
+Even if I think a route is more interesting, if it isn’t worth it for achieving the goal, I will temporarily discard my own desires and change course.
+
+And then, when something unexpected happens within those limits…
+
+That's what makes it so exciting!
+Just thinking about how I should turn the board around into a winning position is so much fun that I can’t help it.
+
+MC: (...Amazing. He’s on a completely different level…) 
+
+Koharu: ……
+
+Just now, I told you the story about feeling the Earth moving with vitality on the tundra, right?
+What I want is to see that scenery where life is moving, like it was then, with my own power.
+
+In my life, I want to attract something enormous, move something enormous, and experience whatever comes from that to the fullest. 
+
+Just imagining what I’ll feel in that moment… it gets me so excited. 
+
+MC: ……
+
+That’s like…
+
+Koharu: Hm?
+
+MC: (He’s like the sun, huh…)
+
+(Koharu becomes a source of heat, like a star… and gets the people around him moving.)
+
+(If we're talking about the sun… the image that comes to mind in HAMA is Renga. The two of them have completely different personalities, though…)
+
+You said you wanted to collaborate with us because it’s necessary for that dream… is that right?
+
+Koharu: Hmm……
+
+Chief, what do you think is the strongest thing in this world?
+
+MC: Eh…
+…An elephant, maybe?
+
+Koharu: Kuhaha! Certainly, if an elephant goes on a rampage, it would be dangerous. 
+
+It’s a <em>‘story’</em>.
+
+MC: …A ‘story’?
+
+Koharu: That's right. A ‘story’ is one of the forces that move people.
+
+MC: (The collaboration with us and ‘stories’… I wonder if there's some kind of connection?) 
+
+Koharu: Hey, Chief.
+
+HAMA must also be thinking about making a leap forward, aiming for the next star upgrade.
+Although I ended up being refused by Kafka, I haven't given up yet.
+
+MC: …...!
+
+Koharu: When opposing forces collide with one another, a force beyond the limits of imagination is produced.
+
+If KOBE and HAMA join forces, their synergy effect should be tremendous.
+My predictions about these things have never been wrong.
+
+If Chief puts in a good word for me, Kafka will consider it too, right? Could you talk to him once?
+
+MC: Huh? But I'm just the Chief, you know?
+I'm practically an ordinary employee.
+
+Koharu: Come on, come on, don't say that. I'm begging you~
+Even just a little is fine, so ask Kafka for me.
+
+Besides… Don't you want to see it?
+If we join forces… the ‘city’ will come alive. 
+
+MC: ……!
+
+HAMA Safety Broadcast: “Just now, A fire alarm has been sounded at the Landmark Tower in Ward 3. esidents in the surrounding area, please…”
+
+MC: ! The Landmark Tower!?
+
+If I remember correctly, Renga should be there right now to welcome the guests…!
+
+Koharu: !
+
+MC: Huh, Koharu!? You suddenly started running…!
+What happened!?
+
+Koharu: Nishizono Renga is in trouble, right? We have to go help him!
+
+</div>
+
+
+<div class="chapter-navigation">
+    <a href="chapter-005-A02.html">
+        Previous chapter ←
+        <small>Chapter 005-A02</small>
+    </a>
+    <a href="chapter-005-A04.html">
+        Next chapter →
+        <small>Chapter 005-A04</small>
+    </a>
+</div>
+
+    </main>
+
+    <footer>
+
+        Made with
+        <span class="footer-heart">♥</span>
+        by (@bpdbnnuy_)
+
+        <br><br>
+
+        Chii-chan's Lovebox · 2026
+
+    </footer>
+
+</body>
+</html>
