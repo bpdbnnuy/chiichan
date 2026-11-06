@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sparklink Stars - Episode 0</title>
+
+    <style>
+        /* =========================
+           GENERAL PAGE
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background: #fff4fa;
+            color: #5f4b58;
+        }
+
+        .links {
+            height: auto;
+        }
+        
+        .links a {
+            color: #5f4b58;
+        }
+
+
+
+        /* =========================
+           TOP DECORATION
+        ========================= */
+
+        .top-decoration {
+            height: 14px;
+            background: repeating-linear-gradient(
+                45deg,
+                #ff9fc8,
+                #ff9fc8 12px,
+                #ffd2e5 12px,
+                #ffd2e5 24px
+            );
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            text-align: center;
+            padding: 55px 20px 40px;
+
+            background:
+                radial-gradient(circle at 20% 30%, #ffffff 0 3px, transparent 5px),
+                radial-gradient(circle at 80% 30%, #ffffff 0 3px, transparent 5px),
+                #ffc6df;
+
+            border-bottom: 4px solid #f39abd;
+        }
+
+        .heart {
+            font-size: 42px;
+        }
+
+        h1 {
+            margin: 8px 0 5px;
+
+            font-family: Georgia, serif;
+            font-size: clamp(38px, 8vw, 70px);
+
+            color: #9c4f76;
+
+            text-shadow: 3px 3px 0 #fff;
+        }
+
+        .subtitle {
+            margin: 0;
+            font-size: 17px;
+            letter-spacing: 1px;
+            color: #8d6177;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            padding: 16px;
+
+            background: #fff;
+            border-bottom: 1px solid #f2cada;
+        }
+
+        nav a {
+            text-decoration: none;
+
+            padding: 9px 18px;
+
+            border-radius: 999px;
+
+            color: #9c4f76;
+            background: #fff0f6;
+
+            border: 1px solid #f3c3d8;
+
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background: #ffc6df;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        main {
+            width: min(1000px, 92%);
+            margin: 40px auto;
+        }
+
+        .welcome {
+            text-align: center;
+
+            background: white;
+
+            padding: 35px 25px;
+
+            border-radius: 25px;
+
+            border: 2px solid #f5c9dc;
+
+            box-shadow: 0 8px 25px rgba(170, 100, 130, 0.08);
+        }
+
+        .welcome h2 {
+            margin-top: 0;
+
+            color: #a34f78;
+            font-family: Georgia, serif;
+        }
+
+        .welcome p {
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           GAME CARDS
+        ========================= */
+
+        .section-title {
+            text-align: center;
+
+            margin: 45px 0 20px;
+
+            font-family: Georgia, serif;
+            color: #9c4f76;
+        }
+
+        .games {
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+            gap: 20px;
+        }
+
+        .game-card {
+            position: relative;
+
+            padding: 28px;
+
+            background: white;
+
+            border-radius: 24px;
+
+            border: 2px solid #f3cada;
+
+            text-align: center;
+
+            box-shadow: 0 8px 20px rgba(170, 100, 130, 0.08);
+
+            transition: 0.25s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow: 0 12px 30px rgba(170, 100, 130, 0.15);
+        }
+
+        .game-icon {
+            font-size: 55px;
+        }
+
+        .game-card h3 {
+            color: #9c4f76;
+
+            font-family: Georgia, serif;
+
+            font-size: 25px;
+        }
+
+        .game-card p {
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+
+            margin-top: 10px;
+
+            padding: 10px 22px;
+
+            border-radius: 999px;
+
+            background: #f49fc5;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: #db76a5;
+            transform: scale(1.04);
+        }
+
+
+        /* =========================
+           LITTLE NOTE
+        ========================= */
+
+        .note {
+            margin-top: 30px;
+
+            padding: 20px;
+
+            background: #fff0f6;
+
+            border: 1px dashed #e8a9c5;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            margin-top: 60px;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            background: #ffd8e8;
+
+            color: #8d6177;
+
+            font-size: 14px;
+        }
+
+        .footer-heart {
+            color: #df6e9e;
+        }
+
+        
+/* ♡ Next chapter box ♡ */
+
+.chapter-navigation {
+    max-width: 760px;
+    margin: 16px auto 35px;
+    padding: 14px 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    background: #fffafd;
+    border: 1px solid #f0dce8;
+    border-radius: 12px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    color: #9b7a8d;
+}
+
+.chapter-navigation a {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    color: #a65d89;
+    text-decoration: none;
+    text-align: right;
+    font-weight: bold;
+}
+
+.chapter-navigation a:hover {
+    color: #d68bb5;
+}
+
+.chapter-navigation small {
+    font-size: 11px;
+    font-weight: normal;
+    color: #9b7a8d;
+}
+
+@media (max-width: 600px) {
+    .chapter-navigation {
+        margin: 16px 12px 30px;
+        padding: 12px;
+    }
+}
+
+
+        h3 {
+            color: #5f4b58;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 17px;
+            line-height: 1.9;
+            font-style: italic;
+        }
+
+
+.translation {
+    max-width: 760px;
+    margin: 30px auto;
+    padding: 28px 32px;
+
+    background-color: #fffafd;
+    color: #5f4b58;
+
+    border: 1px solid #f0dce8;
+    border-radius: 16px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.9;
+
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+
+    box-shadow: 0 4px 14px rgba(160, 105, 140, 0.08);
+}
+
+@media (max-width: 600px) {
+    .translation {
+        margin: 20px 12px;
+        padding: 20px 18px;
+        font-size: 16px;
+        line-height: 1.85;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sparklink Stars</h1>
+        <p>Main Story</p>
+    </header>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="sparklink.html">Sparklink Stars</a>
+
+        <a href="18trip.html">18TRIP</a>
+
+    </nav>
+
+    <main>
+
+        <h2>Episode 0 | The Beginning of Hopes and Dreams.</h2>
+
+        <div class="translation">
+<strong>Neo:</strong>
+Somewhere in the world, there is
+a very, very tiny island, nothing particularly special.
+The Sparkle Islands.
+
+The island that exists at the center of the Sparkle Islands, which is made up of three circular islands…
+Luminoustair.
+
+<strong>Elie:</strong>
+Luminoustair,
+People filled with hopes and dreams gather together from all over the world…
+
+Over time, Luminoustair came to be known as
+“The Grand Staircase to Dreams”.
+
+<strong>Lisse:</strong>
+At Luminoustair, the excitement in people’s hearts is visualized
+As particles of light and sparks…
+
+Through the mysterious power of Kirarium, which is created by sparks, it has undergone its own unique development.
+
+<strong>Laughta:</strong>
+If everyone smiles,
+If everyone had hopes and dreams,
+The world can take a new step forward.
+That’s why, it exists in Luminoustair.
+
+<strong>All 4:</strong>
+A being that brings hopes and dreams to people.
+
+Spark Rider.
+
+<strong>Neo:</strong>
+Now, let’s begin our story of hopes and dreams!
+
+The best musical performance that only us Spark Riders can deliver…
+
+At Spark Ride.
+
+<strong>Laughta:</strong>
+A story of hopes and dreams, huh.
+That’s quite a bold claim, Neo.
+
+<strong>Neo:</strong>
+If it’s Laughta, it should be easy, right?
+
+<strong>Laughta:</strong>
+Obviously.
+
+It wouldn’t be an exaggeration to say that I became a Spark Rider for this very day.
+
+I’ll make everyone in the venue smile with my Spark Ride and get them laughing like crazy.
+
+<strong>Lisse:</strong> 
+Laugh is an interesting way to put it.
+
+In that case,
+I’ll captivate the entire venue with my Spark Ride of love,
+That can even erase curses.
+
+Together with the very best companions, of course.
+
+<strong>Elie:</strong>
+Hehe. Well, when it comes to companions, my group is just as good.
+
+My companions, delicate as glass, and yet as beautiful.
+
+When a dream comes to an end, and when a dream comes true.
+The prince's Spark Ride, always there by your side.
+
+Let us show you that.
+
+<strong>Rutie:</strong>
+Rutiti.
+Everyone is really overflowing with motivation.
+
+Together, all of you, were able to make it this far.
+Finally, the legend begins.
+
+I just can’t help looking forward to it, from now on.
+
+<strong>Neo:</strong>
+Thank you, Rutie.
+
+This is a stage of dreams and hopes, where only a few select Riders can stand.
+
+As long as I’m standing here,
+I have to make everyone who came as happy as possible.
+
+Something only we can do,
+With Spark Ride.
+
+<strong>Elie:</strong>
+Hehe.
+You’re missing something, Neo.
+
+<strong>Neo:</strong>
+Huh?
+
+<strong>Elie:</strong>
+What you’re saying is certainly true.
+
+As long as I’m standing on this stage,
+I want to give hopes and dreams to everyone who comes to see me.
+
+<strong>Lisse:</strong>
+But there’s one more thing…
+There’s something we want only one person to receive.
+
+That is…
+
+<strong>Laughta:</strong>
+Hey hey, Lisse.
+
+Don’t just say what you feel so easily.
+We are Spark Riders.
+That’s why, my feelings are…
+
+Let’s tell them with the best Spark Ride ever!
+
+<strong>Lisse:</strong> 
+Haha. You’re absolutely right.
+
+<strong>Neo:</strong>
+Jeez…
+I thought I was the only one, so it’s surprising to find out everyone feels the same way.
+
+You’re truly amazing…
+
+Thank you…
+
+If it weren’t for you,
+I wouldn’t have been able to make it this far.
+
+It’s because of you,
+That I was able to make it this far.
+
+You’re truly the best!
+
+<strong>Laughta:</strong>
+Hey, Neo.
+Don’t just leave me alone like that.
+
+That’s something we all have in common.
+
+That’s why,
+That’s a feeling we all share.
+
+<strong>Lisse:</strong>
+That’s how it is.
+
+You might not have noticed, so
+I’ll make sure to tell you in words.
+
+Every Rider here today needs you.
+
+I aspire to be a Spark Rider,
+Continuing to fulfill my dreams alongside you.
+
+<strong>Elie:</strong>
+Therefore,
+Let’s put on the best Super Live ever.
+
+Let’s fill this venue with sparkle,
+And deliver hopes and dreams to the whole world.
+
+So, at that time…
+
+<strong>All 4:</strong>
+I hope we’ll keep pursuing our dreams together in the future.
+
+</strong><em></em>Spark Ride Performance</em></strong>
+
+<strong>You:</strong>
+Cheers, excitement, thrills.
+Magical songs and dances.
+
+That is Spark Ride.
+A symbol of dreams and hope in this world.
+
+The venue is now enveloped
+In a dazzling sparkle.
+
+<strong>Rutie:</strong>
+Rutiti.
+It’s really popular.
+
+As expected,
+Entrusting them to you was the right decision.
+It seems I wasn’t wrong.
+
+It feels like a long time ago,
+Yet it also feels like it happened just recently.
+
+The day you met them…
+
+It all began the day you arrived at Luminoustair.
+
+<strong>???:</strong>
+<em>Welcome
+to
+Luminoustair.</em>
+
+We will now proceed with your authentication registration.
+
+Please enter your information on this device.
+
+…Registration information confirmation.
+……Authentication registration has begun.
+………Authentication registration complete.
+
+<em>[Name]</em>
+Affiliation: SIKR
+Position: Conductor.
+Assigned Spark Rider: <strong>To be determined.</strong>
+
+This is [MC]’s current status.
+
+Now, [MC]-sama.
+Please proceed to the conference room on the second floor.
+
+<strong>[MC]:</strong>
+…
+
+(...Huh?)
+
+<strong>???:</strong>
+Zzz… Zzz… Zzz…
+
+<strong>[MC]:</strong>
+Um…
+
+<strong>???:</strong>
+Ruti!
+That was rude of me.
+I was a little engrossed in a conversation between my eyelids.
+
+I am Rutie.
+I am a management robot, primarily responsible for supporting the Conductor.
+
+Welcome to Luminoustair.
+I’ve been waiting for you, [MC].
+
+<strong>[MC]:</strong>
+Me?
+
+<strong>Rutie:</strong>
+Of course.
+After all, I’ll be in charge of supporting you from now on.
+
+<strong>[MC]:</strong>
+(Why me, a newcomer…)
+
+<strong>Rutie:</strong>
+Rutiti.
+Let me clearly explain the situation.
+
+All Conductors must visit Luminoustair.
+
+To meet the Spark Rider they’re in charge of.
+
+The Conductor’s job is to support the Spark Riders…
+Commonly known as <strong>“Riders”</strong>,
+More closely than anyone else.
+
+There are many different tasks to do.
+Team management,
+Considerations for Stage Production,
+A record of the Spark Ride photoshoot.
+
+In short, you’re bound together by fate!
+You’ll be together forever!
+
+You already know this much, right?
+
+<strong>[MC]:</strong>
+Yes.
+
+<strong>Rutie:</strong>
+That’s a wonderful answer.
+
+<strong>[MC]:</strong>
+(Spark Riders will bring happiness to people all over the world,
+Through Spark Ride.)
+
+(People who give everyone hope,
+Who inspire everyone to dream,
+And who lead everyone to the future…)
+
+(But, I wonder.)
+
+(The Spark Riders, who bring everyone happiness,
+I wonder who brings happiness to them.)
+
+(I don’t want to just be happy.
+I want to be a source of strength for Spark Riders.)
+
+(That’s why I became who I am.)
+
+(A Conductor.)
+
+<strong>Rutie:</strong>
+So, as you might expect,
+The average new Conductor,
+After completing registration here at SIKR,
+Is assigned to a specific Spark Rider…
+
+You are a bit of an exception…
+
+<strong>[MC]:</strong>
+An exception?
+
+<strong>Rutie:</strong>
+Normally, there are only about two or three Riders who want rookie Conductors…
+
+You have received a tremendous number of requests from Riders.
+
+<strong>[MC]:</strong>
+Eh!?
+
+<strong>Rutie:</strong>
+Well, there’s no point worrying about it.
+
+Luminoustair is an island where hopes and dreams come true.
+Sometimes, strange things like this happen.
+
+<strong>[MC]:</strong>
+(Why me…?)
+
+<strong>Rutie:</strong>
+Due to these circumstances,
+I have become [MC]-sama’s exclusive supporter,
+And will be working with you.
+
+-That’s why,
+This is my first assignment as your personal supporter!
+
+Ta-da!
+Introducing Spark Riders to [MC]-sama!
+
+These Riders,
+They hope that [MC]-sama will be in charge of them.
+
+Please, feel free to choose anyone.
+
+And then, when you choose your assigned Rider…
+
+Your story will begin!
+
+What kind of story do you want to create?
+
+<strong>[MC]:</strong>
+Finally… This is the first step towards becoming a Conductor.
+
+As a rookie Conductor,
+The Spark Rider I’d like to be in charge of is…
+</div>
+
+
+<div class="chapter-navigation">
+    <a href="sparklink.html">
+        List of chapters
+    </a>
+    <a href="sparklinkms1.html">
+        Next chapter →
+        <small>Episode 1</small>
+    </a>
+</div>
+
+    </main>
+
+    <footer>
+
+        Made with
+        <span class="footer-heart">♥</span>
+        by (@bpdbnnuy_)
+
+        <br><br>
+
+        Chii-chan's Lovebox · 2026
+
+    </footer>
+
+</body>
+</html>
