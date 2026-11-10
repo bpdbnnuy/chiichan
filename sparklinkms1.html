@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sparklink Stars - Episode 1</title>
+
+    <style>
+        /* =========================
+           GENERAL PAGE
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background: #fff4fa;
+            color: #5f4b58;
+        }
+
+        .links {
+            height: auto;
+        }
+        
+        .links a {
+            color: #5f4b58;
+        }
+
+
+
+        /* =========================
+           TOP DECORATION
+        ========================= */
+
+        .top-decoration {
+            height: 14px;
+            background: repeating-linear-gradient(
+                45deg,
+                #ff9fc8,
+                #ff9fc8 12px,
+                #ffd2e5 12px,
+                #ffd2e5 24px
+            );
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            text-align: center;
+            padding: 55px 20px 40px;
+
+            background:
+                radial-gradient(circle at 20% 30%, #ffffff 0 3px, transparent 5px),
+                radial-gradient(circle at 80% 30%, #ffffff 0 3px, transparent 5px),
+                #ffc6df;
+
+            border-bottom: 4px solid #f39abd;
+        }
+
+        .heart {
+            font-size: 42px;
+        }
+
+        h1 {
+            margin: 8px 0 5px;
+
+            font-family: Georgia, serif;
+            font-size: clamp(38px, 8vw, 70px);
+
+            color: #9c4f76;
+
+            text-shadow: 3px 3px 0 #fff;
+        }
+
+        .subtitle {
+            margin: 0;
+            font-size: 17px;
+            letter-spacing: 1px;
+            color: #8d6177;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            padding: 16px;
+
+            background: #fff;
+            border-bottom: 1px solid #f2cada;
+        }
+
+        nav a {
+            text-decoration: none;
+
+            padding: 9px 18px;
+
+            border-radius: 999px;
+
+            color: #9c4f76;
+            background: #fff0f6;
+
+            border: 1px solid #f3c3d8;
+
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background: #ffc6df;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        main {
+            width: min(1000px, 92%);
+            margin: 40px auto;
+        }
+
+        .welcome {
+            text-align: center;
+
+            background: white;
+
+            padding: 35px 25px;
+
+            border-radius: 25px;
+
+            border: 2px solid #f5c9dc;
+
+            box-shadow: 0 8px 25px rgba(170, 100, 130, 0.08);
+        }
+
+        .welcome h2 {
+            margin-top: 0;
+
+            color: #a34f78;
+            font-family: Georgia, serif;
+        }
+
+        .welcome p {
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           GAME CARDS
+        ========================= */
+
+        .section-title {
+            text-align: center;
+
+            margin: 45px 0 20px;
+
+            font-family: Georgia, serif;
+            color: #9c4f76;
+        }
+
+        .games {
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+            gap: 20px;
+        }
+
+        .game-card {
+            position: relative;
+
+            padding: 28px;
+
+            background: white;
+
+            border-radius: 24px;
+
+            border: 2px solid #f3cada;
+
+            text-align: center;
+
+            box-shadow: 0 8px 20px rgba(170, 100, 130, 0.08);
+
+            transition: 0.25s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow: 0 12px 30px rgba(170, 100, 130, 0.15);
+        }
+
+        .game-icon {
+            font-size: 55px;
+        }
+
+        .game-card h3 {
+            color: #9c4f76;
+
+            font-family: Georgia, serif;
+
+            font-size: 25px;
+        }
+
+        .game-card p {
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+
+            margin-top: 10px;
+
+            padding: 10px 22px;
+
+            border-radius: 999px;
+
+            background: #f49fc5;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: #db76a5;
+            transform: scale(1.04);
+        }
+
+
+        /* =========================
+           LITTLE NOTE
+        ========================= */
+
+        .note {
+            margin-top: 30px;
+
+            padding: 20px;
+
+            background: #fff0f6;
+
+            border: 1px dashed #e8a9c5;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            margin-top: 60px;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            background: #ffd8e8;
+
+            color: #8d6177;
+
+            font-size: 14px;
+        }
+
+        .footer-heart {
+            color: #df6e9e;
+        }
+
+        
+/* ♡ Next chapter box ♡ */
+
+.chapter-navigation {
+    max-width: 760px;
+    margin: 16px auto 35px;
+    padding: 14px 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    background: #fffafd;
+    border: 1px solid #f0dce8;
+    border-radius: 12px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    color: #9b7a8d;
+}
+
+.chapter-navigation a {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    color: #a65d89;
+    text-decoration: none;
+    text-align: right;
+    font-weight: bold;
+}
+
+.chapter-navigation a:hover {
+    color: #d68bb5;
+}
+
+.chapter-navigation small {
+    font-size: 11px;
+    font-weight: normal;
+    color: #9b7a8d;
+}
+
+@media (max-width: 600px) {
+    .chapter-navigation {
+        margin: 16px 12px 30px;
+        padding: 12px;
+    }
+}
+
+
+        h3 {
+            color: #5f4b58;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 17px;
+            line-height: 1.9;
+            font-style: italic;
+        }
+
+
+.translation {
+    max-width: 760px;
+    margin: 30px auto;
+    padding: 28px 32px;
+
+    background-color: #fffafd;
+    color: #5f4b58;
+
+    border: 1px solid #f0dce8;
+    border-radius: 16px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.9;
+
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+
+    box-shadow: 0 4px 14px rgba(160, 105, 140, 0.08);
+}
+
+@media (max-width: 600px) {
+    .translation {
+        margin: 20px 12px;
+        padding: 20px 18px;
+        font-size: 16px;
+        line-height: 1.85;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sparklink Stars</h1>
+        <p>Main Story</p>
+    </header>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="sparklink.html">Sparklink Stars</a>
+
+        <a href="18trip.html">18TRIP</a>
+
+    </nav>
+
+    <main>
+
+        <h2>Episode 1 | Entrusted Person.</h2>
+
+        <div class="translation">
+
+<em><strong>SIKR Conference Room</strong></em>
+
+<strong>Rutie:</strong>
+What kind of story do you want to create?
+
+Ruti!?
+
+<strong>???:</strong>
+Seriously…
+What are you talking about without me?
+
+<strong>Rutie:</strong>
+Oh?
+
+<strong>[MC]:</strong>
+(This person is…)
+
+<strong>Maeka:</strong>
+My name is Maeka.
+My real name is
+Flux Growth Maker.
+
+Well, it’s long so,
+You don’t need to memorize it.
+
+I have access rights to almost all the Luminoustair systems,
+and I’m responsible for management, updates, and maintenance.
+
+I look forward to working with you from now on, [MC].
+
+<strong>[MC]:</strong>
+Ah, yes…
+
+<strong>Maeka:</strong>
+Now, Rutie.
+
+<strong>Rutie:</strong>
+Ruti?
+
+<strong>Maeka:</strong>
+Why are you trying to decide on the assigned Rider,
+Without even letting me meet [MC]?
+
+<strong>Rutie:</strong>
+But, I am [MC]-sama’s supporter…
+
+<strong>Maeka:</strong>
+If you’re a supporter,
+I assume you’ve explained everything, right?
+
+<strong>Rutie:</strong>
+I mentioned that there are many Riders who would like to be with [MC]-sama…
+
+<strong>Maeka:</strong>
+What about the Luminoustair crisis?
+
+<strong>Rutie:</strong>
+Ruti!
+Ah, that’s…
+
+<strong>Maeka:</strong>
+Seriously…
+I guess you didn’t tell them, after all.
+
+<strong>Rutie:</strong>
+Ruti~
+I completely forgot~...
+
+<strong>[MC]:</strong>
+(The Luminoustair crisis?)
+
+<strong>Maeka:</strong>
+It’s my fault.
+Rutie is very motivated,
+But still has a long way to go.
+
+Please forgive them.
+
+<strong>[MC]:</strong>
+Ah, yes…
+It’s okay.
+
+So, what you were talking about is…
+
+<strong>Maeka:</strong>
+Right.
+But rather than discussing it here…
+
+I’d like you to come with me.
+This area is normally prohibited for anyone other than SIKR staff,
+But this is an exception.
+
+You are also allowed to enter.
+
+So, let’s talk in detail about what to do next.
+
+<strong>[MC]:</strong>
+Where are we going?
+
+<strong>Maeka:</strong>
+It’s the SIKR lab.
+
+<em><strong>SIKR Laboratory</strong>em></strong>
+
+    <strong>Rutie:</strong>
+Ruti~ I’m so sorry.
+I forgot to tell you something important…
+
+<strong>[MC]:</strong>
+It’s okay.
+
+<strong>Rutie:</strong>
+Ruti! Thank you!
+[MC]-sama is so kind!
+
+<strong>Maeka:</strong>
+Now, let me explain.
+
+Let’s begin by explaining to you the special power that exists only in Luminoustair… <strong>“Kirarium”</strong>.
+
+At Luminoustair,
+People’s excitement and joy get visualized
+As particles of light and sparkles.
+
+And through the energy called Kirarium that’s born from that sparkle,
+Luminoustair has undergone its own unique development.
+
+And here at SIKR,
+Research on Kirarium and the operation of Spark Ride had been going smoothly,
+Up until now.
+
+However…
+
+<strong>Rutie:</strong>
+Currently, Luminoustair is in serious trouble due to a shortage of Kirarium.
+
+<strong>[MC]:</strong>
+Huh?
+
+<strong>Rutie:</strong>
+At this rate,
+Luminoustair’s future looks bleak!
+
+The story of hopes and dreams is coming to an end!
+
+<strong>[MC]:</strong>
+Why is that?
+
+<strong>Maeka:</strong>
+For better of for worse,
+Luminoustair has become too advanced.
+
+<strong>[MC]:</strong>
+Huh?
+
+<strong>Maeka:</strong>
+Development requires effort.
+Everyone became so desperate for development that…
+
+The people of Luminoustair are so caught up in the business of their daily lives,
+That they forget to harbor hopes and dreams.
+
+And on top of that,
+<strong>Tact</strong> has disappeared too.
+
+The legendary Spark Rider,
+who once captivated everyone in Luminoustair,
+and kept thrilling their hearts, Tact.
+
+Thanks to him,
+A vast amount of Kirarium was created,
+And Luminoustair has undergone a significant evolution.
+
+He was the one who brought hopes and dreams.
+
+But Tact suddenly vanished.
+The one who brought hopes and dreams was gone.
+
+Many people have left Spark Ride…
+
+This is also one of the factors.
+
+<strong>Rutie:</strong>
+As a result, the amount of Kirarium produced is decreasing every year,
+And Luminoustair is in serious trouble.
+
+<strong>Maeka:</strong>
+But that doesn’t mean it’s all over.
+
+Tact had left.
+But then, someone new appeared.
+
+They inspire hopes and dreams in people,
+And possess the same strong passion Tact did.
+They are truly wonderful Riders.
+
+<strong>Rutie:</strong>
+Maeka-sama, please share their video.
+
+<strong>Maeka:</strong>
+I understand.
+
+They are the ones who will weave the next generation’s stories of hopes and dreams.
+
+First,
+Midveil by Crystal Float.
+The perfect princes dancing amidst fantasy.
+
+Next, there’s Endelore at Wisdom Hill.
+The phrase “Embodiment of Mystery” is the most fitting.
+
+And…
+
+aMazINC, of Electricity.
+Eccentrics who cause screams of delight.
+
+Lastly…
+
+UPbeats! at Dream Plaza.
+The ones who make all dreams come true.
+
+I would like you to support them as their Conductor.
+
+And I want you to lead them.
+
+For Luminoustair’s biggest Spark Ride.
+A <strong>Legendery Ride</strong>.
+
+<strong>Legendary Rides</strong> are the most challenging Spark Rides,
+Where only a selection of Riders can participate.
+
+To participate,
+You need to have a stronger desire than anyone else.
+
+<strong>Rutie:</strong>
+However, they have a few problems…
+
+They’re unable to release their true feelings.
+
+Therefore,
+I would like you to solve that problem.
+
+<strong>[MC]:</strong>
+O-Okay, I understand…
+
+So, which team should I support?
+
+<strong>Maeka:</strong>
+Hehehe.
+It must be difficult to choose from so many people, right?
+
+That’s why…
+
+<strong>[MC]:</strong>
+(I have a bad feeling about this…)
+
+<strong>Maeka:</strong>
+I want you to support everyone!
+
+<strong>[MC]:</strong>
+…Eh!
+
+<strong>Rutie:</strong>
+Ruti~...
+Considering the burden on [MC]-sama,
+It would be better to narrow it down to one…
+
+<strong>[MC]:</strong>
+All the teams is a bit much…
+
+<strong>Maeka:</strong>
+I know I’m asking for the impossible.
+Even so, I want you to do it.
+
+Tact entrusted his hopes to you.
+
+<strong>[MC]:</strong>
+Huh?
+
+<strong>Maeka:</strong>
+I don’t know why Tact left.
+But he said something before he disappeared.
+
+“My Spark Ride is over.
+But my hopes and dreams will never end.”
+
+“Because [MC] is there.”
+
+—Is what was said.
+
+<strong>[MC]:</strong>
+Why would my <strong>uncle</strong> do that?
+
+<strong>Maeka:</strong>
+I don’t know.
+But precisely because we don’t know,
+Wouldn’t you want to try to find the answer?
+
+<strong>[MC]:</strong>
+……
+
+<strong>Maeka:</strong>
+And they have also been waiting for you.
+
+<strong>[MC]:</strong>
+Huh?
+
+<strong>Maeka:</strong>
+Midveil, Endelore,
+aMazINC., UPbeats!.
+
+Each of these teams is a popular team in each Luminoustair region.
+
+But none of them have Conductors.
+
+Do you know why?
+
+<strong>[MC]:</strong>
+Maybe…
+
+<strong>Maeka:</strong>
+That’s right.
+They also heard the story from Tact,
+And they’ve been waiting for you to come.
+
+So, please, I’m begging you.
+I’d like you to take this on…
+
+<strong>[MC]:</strong>
+……
+
+(I don’t understand why.
+But if you trusted me…)
+
+…I got it.
+
+I will do it.
+
+<strong>Rutie:</strong>
+Thank you!
+[MC]-sama is truly a wonderful person!
+
+<strong>Maeka:</strong>
+Okay, then, it’s settled.
+
+Now,
+You will go and greet each of the riders I have introduced to you.
+
+Navigation to each region will be my responsibility,
+So you won’t get lost.
+
+—Is what I’d like to say, but…
+
+There was one Rider who just couldn’t be patient.
+
+First, head to <strong>Dream Plaza</strong> with him.
+
+<strong>[MC]:</strong>
+(Dream Plaza?
+So that means…)
+
+<strong>???:</strong>
+Excuse me!
+
+Haha!
+Nice to meet you, Conductor!
+
+I’m Neo Michell.
+I’m the leader and center of UPbeats!
+
+<strong>[MC]:</strong>
+I’m [MC]. Nice to meet you.
+
+<strong>Neo:</strong>:
+That’s a lovely name.
+
+I’m sorry for showing up so suddenly.
+I heard you were coming to Luminoustair today.
+
+I couldn’t sit still any longer,
+So I came to see you.
+
+I’m looking forward to working with you.
+
+<strong>[MC]:</strong>
+The pleasure is all mine.
+
+<strong>Neo:</strong>:
+Alright then, let’s get started!
+
+A city where hopes and dreams create sparkles.
+To Dream Plaza!
+
+<strong>Maeka:</strong>
+The first contact went pretty well.
+
+<strong>Rutie:</strong>
+I agree.
+
+But the story has only just begun.
+
+<strong>Maeka:</strong>
+Well…
+
+Midveil, Endelore,
+aMazINC., UPbeats!.
+
+They all possess remarkable abilities,
+But each of them has their own quirks.
+
+Can [MC] really lead them…?
+
+<strong>Rutie:</strong>
+All we can do is believe.
+
+<strong>Maeka:</strong>
+……
+
+<strong>Rutie:</strong>
+If this continues,
+If the number of Kirariums decreases,
+And people forget their hopes and dreams,
+Smiles will disappear from everyone’s faces.
+
+The legend of Tact-sama has come to an end.
+
+That’s why…
+
+It’s time to create a new legend.
+
+I’m leaving it to you, [MC].
+
+From this small island,
+Entertain people all over the world,
+Satisfy their curiosity,
+And deliver sparkle and inspiration.
+
+Your dreams can start coming true right now.
+</div>
+
+
+<div class="chapter-navigation">
+    <a href="sparklinkms0.html">
+        Previous chapter ←
+        <small>Episode 0</small>
+    </a>
+    <a href="sparklinkms2.html">
+        Next chapter →
+        <small>Episode 2</small>
+    </a>
+</div>
+
+    </main>
+
+    <footer>
+
+        Made with
+        <span class="footer-heart">♥</span>
+        by (@bpdbnnuy_)
+
+        <br><br>
+
+        Chii-chan's Lovebox · 2026
+
+    </footer>
+
+</body>
+</html>
