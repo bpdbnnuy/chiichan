@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sparklink Stars - Episode 2</title>
+
+    <style>
+        /* =========================
+           GENERAL PAGE
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background: #fff4fa;
+            color: #5f4b58;
+        }
+
+        .links {
+            height: auto;
+        }
+        
+        .links a {
+            color: #5f4b58;
+        }
+
+
+
+        /* =========================
+           TOP DECORATION
+        ========================= */
+
+        .top-decoration {
+            height: 14px;
+            background: repeating-linear-gradient(
+                45deg,
+                #ff9fc8,
+                #ff9fc8 12px,
+                #ffd2e5 12px,
+                #ffd2e5 24px
+            );
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            text-align: center;
+            padding: 55px 20px 40px;
+
+            background:
+                radial-gradient(circle at 20% 30%, #ffffff 0 3px, transparent 5px),
+                radial-gradient(circle at 80% 30%, #ffffff 0 3px, transparent 5px),
+                #ffc6df;
+
+            border-bottom: 4px solid #f39abd;
+        }
+
+        .heart {
+            font-size: 42px;
+        }
+
+        h1 {
+            margin: 8px 0 5px;
+
+            font-family: Georgia, serif;
+            font-size: clamp(38px, 8vw, 70px);
+
+            color: #9c4f76;
+
+            text-shadow: 3px 3px 0 #fff;
+        }
+
+        .subtitle {
+            margin: 0;
+            font-size: 17px;
+            letter-spacing: 1px;
+            color: #8d6177;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            padding: 16px;
+
+            background: #fff;
+            border-bottom: 1px solid #f2cada;
+        }
+
+        nav a {
+            text-decoration: none;
+
+            padding: 9px 18px;
+
+            border-radius: 999px;
+
+            color: #9c4f76;
+            background: #fff0f6;
+
+            border: 1px solid #f3c3d8;
+
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background: #ffc6df;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        main {
+            width: min(1000px, 92%);
+            margin: 40px auto;
+        }
+
+        .welcome {
+            text-align: center;
+
+            background: white;
+
+            padding: 35px 25px;
+
+            border-radius: 25px;
+
+            border: 2px solid #f5c9dc;
+
+            box-shadow: 0 8px 25px rgba(170, 100, 130, 0.08);
+        }
+
+        .welcome h2 {
+            margin-top: 0;
+
+            color: #a34f78;
+            font-family: Georgia, serif;
+        }
+
+        .welcome p {
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           GAME CARDS
+        ========================= */
+
+        .section-title {
+            text-align: center;
+
+            margin: 45px 0 20px;
+
+            font-family: Georgia, serif;
+            color: #9c4f76;
+        }
+
+        .games {
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+            gap: 20px;
+        }
+
+        .game-card {
+            position: relative;
+
+            padding: 28px;
+
+            background: white;
+
+            border-radius: 24px;
+
+            border: 2px solid #f3cada;
+
+            text-align: center;
+
+            box-shadow: 0 8px 20px rgba(170, 100, 130, 0.08);
+
+            transition: 0.25s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow: 0 12px 30px rgba(170, 100, 130, 0.15);
+        }
+
+        .game-icon {
+            font-size: 55px;
+        }
+
+        .game-card h3 {
+            color: #9c4f76;
+
+            font-family: Georgia, serif;
+
+            font-size: 25px;
+        }
+
+        .game-card p {
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+
+            margin-top: 10px;
+
+            padding: 10px 22px;
+
+            border-radius: 999px;
+
+            background: #f49fc5;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: #db76a5;
+            transform: scale(1.04);
+        }
+
+
+        /* =========================
+           LITTLE NOTE
+        ========================= */
+
+        .note {
+            margin-top: 30px;
+
+            padding: 20px;
+
+            background: #fff0f6;
+
+            border: 1px dashed #e8a9c5;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            margin-top: 60px;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            background: #ffd8e8;
+
+            color: #8d6177;
+
+            font-size: 14px;
+        }
+
+        .footer-heart {
+            color: #df6e9e;
+        }
+
+        
+/* ♡ Next chapter box ♡ */
+
+.chapter-navigation {
+    max-width: 760px;
+    margin: 16px auto 35px;
+    padding: 14px 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    background: #fffafd;
+    border: 1px solid #f0dce8;
+    border-radius: 12px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    color: #9b7a8d;
+}
+
+.chapter-navigation a {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    color: #a65d89;
+    text-decoration: none;
+    text-align: right;
+    font-weight: bold;
+}
+
+.chapter-navigation a:hover {
+    color: #d68bb5;
+}
+
+.chapter-navigation small {
+    font-size: 11px;
+    font-weight: normal;
+    color: #9b7a8d;
+}
+
+@media (max-width: 600px) {
+    .chapter-navigation {
+        margin: 16px 12px 30px;
+        padding: 12px;
+    }
+}
+
+
+        h3 {
+            color: #5f4b58;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 17px;
+            line-height: 1.9;
+            font-style: italic;
+        }
+
+
+.translation {
+    max-width: 760px;
+    margin: 30px auto;
+    padding: 28px 32px;
+
+    background-color: #fffafd;
+    color: #5f4b58;
+
+    border: 1px solid #f0dce8;
+    border-radius: 16px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.9;
+
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+
+    box-shadow: 0 4px 14px rgba(160, 105, 140, 0.08);
+}
+
+@media (max-width: 600px) {
+    .translation {
+        margin: 20px 12px;
+        padding: 20px 18px;
+        font-size: 16px;
+        line-height: 1.85;
+    }
+}
+
+
+/* ♡ Dialogue choices ♡ */
+
+.dialogue-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+
+    margin: 25px 0;
+    color: #9b638b;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.option-left {
+    text-align: left;
+    flex: 1;
+}
+
+.option-right {
+    text-align: right;
+    flex: 1;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    .dialogue-options {
+        gap: 15px;
+        font-size: 14px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sparklink Stars</h1>
+        <p>Main Story</p>
+    </header>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="sparklink.html">Sparklink Stars</a>
+
+        <a href="18trip.html">18TRIP</a>
+
+    </nav>
+
+    <main>
+
+        <h2>Episode 2 | My Dream.</h2>
+
+        <div class="translation">
+Riding along on a cheerful and pop-style streetcar,
+You’ve arrived at Dream Plaza.
+
+This town, once home to the legendary Rider Tact,
+Is strangely filled with smiles.
+
+A bouncy walkway.
+Buildings that change between day and night.
+It’s as if the whole town is a theme park.
+
+Just being here makes everyone smile.
+This is a city where all your “wants” can come true.
+
+Now, let’s begin the story…
+
+<em><strong>Dream Plaza Station Square</strong></em>
+
+<strong>Neo:</strong>
+This is Dream Plaza!
+What do you think? Feel the hopes and dreams—
+
+<strong>Girl with big, round eyes:</strong>
+Neo, that Super Live the other day was amazing!
+
+<strong>Neo:</strong>
+Haha! Thank you!
+We’ll continue to bring you the happiest times ever!
+
+<strong>Woman in a straw hat:</strong>
+Neo, listen to this!
+My child got first place on their exam!
+
+<strong>Neo:</strong>
+Wow! Congratulations!
+The moment when your hard work pays off is the best!
+
+<strong>Boy in short sleeves:</strong>
+Ah~! It’s Neo!
+Look at this, Neo.
+I bought a new t-shirt!
+
+<strong>Neo:</strong>
+You look so cool!
+You can pull off any outfit,
+You’re so amazing!
+
+<strong>[MC]:</strong>
+(The leader of UPbeats!, Neo.
+He’s incredibly popular…)
+
+<strong>Calm young man:</strong>
+Are you Neo’s friend too?
+
+<strong>[MC]:</strong>
+Starting today,
+I’ll be UPbeats!’s Conductor.
+
+<strong>Calm young man:</strong>
+Wow!
+UPbeats! Has a Conductor!
+
+We need to celebrate Neo!
+
+<strong>[MC]:</strong>
+Everyone seems to love Neo.
+
+<strong>Calm young man:</strong>
+Of course.
+Just seeing him makes me forget all my troubles,
+And I naturally find myself smiling.
+
+That’s Neo Michell from UPbeats!
+
+<strong>Neo:</strong>
+I’m embarrassed by all the praise.
+No, actually, the joy outweighs the embarrassment.
+Thank you!
+
+Alright, everyone.
+See you soon!
+
+<strong>Boy in short sleeves:</strong>
+See ya, Neo~!
+
+<strong>Neo:</strong>
+Yeah!
+
+I’m sorry!
+I offered to show you around,
+But I ended up making you wait, didn’t I?
+
+<strong>[MC]:</strong>
+No, I learned a lot.
+
+<strong>Neo:</strong>
+Learned?
+
+<strong>[MC]:</strong>
+Neo is pretty popular.
+
+<strong>Neo:</strong>
+No, that’s not true.
+
+Everyone loves me,
+And I love everyone.
+
+We’re just sending each other our feelings of love.
+
+But it’s still not enough.
+I want to convey my feelings to everyone in Luminoustair.
+
+<strong>[MC]:</strong>
+(Despite his popularity,
+He never became conceited.
+Rather, he strives to go even further…)
+
+<strong>Neo:</strong>
+So, I’ll show it to you today.
+
+I want to express how much I love everyone.
+
+<em><strong>FIVE STAR CINEMA (Outside)</strong></em>
+
+<strong>Neo:</strong>
+So, this is Five Star Cinema.
+
+If you want to watch a movie, this is definitely the place.
+
+The popcorn is also delicious,
+So be sure to buy some to enjoy with your movie.
+
+—Just kidding!
+
+So, next—
+
+<strong>???:</strong>
+Neo-!
+
+<strong>Neo:</strong>
+Huh? Didi, why are you here?
+
+Today, you had a photoshoot for lunch…
+
+<strong>Didi:</strong>
+Haa~! Haa~!
+
+I finished it quickly!
+
+It’s not fair!
+I want to show the Conductor around too!
+
+<strong>Neo:</strong>
+So you rushed to finish work?
+
+<strong>Didi:</strong>
+Hmph! Of course!
+
+When it comes to photoshoots, it’s my chance to show off my skill!
+
+I perfectly executed the designated poses,
+And finished an hour earlier than planned!
+
+Because it’s me!
+Me!
+UPbeats!’s Mr. Perfect!
+
+Didi ・Cedric・Byrd!
+
+<strong>Neo:</strong>
+Haha! That’s Didi for you!
+
+Let me introduce you!
+
+He was so eager to see you,
+He finished work in a hurry and rushed over to you,
+The reliable member of UPbeats!
+
+It’s Didi.
+
+<strong>Didi:</strong>
+That’s right!
+
+Conductor!
+Thank you in advance!
+
+<strong>[MC]:</strong>
+(So polite…!)
+
+Yes. Thank you.
+
+<strong>Didi:</strong>
+So, Neo.
+What’s the plan for today’s tour?
+
+If you haven’t decided yet,
+I have an exciting dream plan prepared just in case.
+
+<strong>Neo:</strong>
+You really have such a great plan?
+
+In that case, why don’t we combine our plans and do both?
+
+<strong>Didi:</strong>
+That’s a great suggestion!
+By the way, regarding the last part of the tour...
+
+<strong>Neo:</strong>
+Hehehe, I think that part is probably the same, isn’t it?
+
+<strong>Didi:</strong>
+What! So, Neo too?
+
+<strong>Neo:</strong>
+Of course.
+That’s the best way for them to get to know us.
+
+<strong>Didi:</strong>
+That’s right.
+
+<strong>[MC]:</strong>
+Where will you take me?
+
+<strong>Neo:</strong>
+Hehe, that is…
+
+<strong>Didi:</strong>
+It’s already decided, isn’t it?
+
+<strong>Neo & Didi:</strong>
+Spark Ride!
+
+<em><strong>Stage</strong></em>
+
+<strong>Neo:</strong>
+Thank you for coming again today, everyone!
+
+<strong>Audience:</strong>
+Of course, Neo~!
+
+<strong>???:</strong>
+A-hyuck.
+I’m so happy to see you full of energy.
+
+<strong>Audience:</strong>
+It’s all thanks to Hugh!
+
+<strong>Didi:</strong>
+Hahaha!
+But this is just the beginning!
+The real excitement is yet to come!
+
+<strong>Audience:</strong>
+Didi, let’s have fun together!
+
+<strong>???:</strong>
+Well, let’s have some fun.
+All together.
+
+<strong>Audience:</strong>
+Just having Rasca here,
+Makes it so much fun!
+
+<strong>???:</strong>
+Everyone, please don’t forget about me~
+I’ll do my best~
+
+<strong>Audience:</strong>
+I would never forget Ranka~!
+
+<strong>Neo:</strong>
+Okay then, listen up!
+
+<strong>[MC]:</strong>
+(So this is UPbeats!...)
+
+(The sense of unity with the audience is outstanding.
+It’s not just the team,
+They’re creating a vibrant stage with the audience.)
+
+(And at the heart of it all is…)
+
+<strong>Neo:</strong>
+Haha! We’re still going!
+
+<strong>Hugh:</strong>
+(As expected of the leader and center of UPbeats!)
+
+<strong>Rasca:</strong>
+(No matter how much effort I put into the performance,
+You outdo me with pure Ride skill.)
+
+<strong>Ranka:</strong>
+(It feels especially amazing today~
+I guess it’s because the Conductor is here to watch~)
+
+<strong>Didi:</strong>
+Hmmm…!
+
+<strong>Neo:</strong>
+(Huh? Didi?)
+
+<strong>Didi:</strong>
+We’re just getting started!
+
+(UPbeats! isn’t just about Neo.
+I will definitely beat Neo!)
+
+<strong>Neo:</strong>
+(Haha! Didi is the best!)
+
+Okay! Shall we go for the last one?
+Everyone, one, two, three!
+
+<strong>Neo & Audience:</strong>
+Clap!
+
+<strong>Audience:</strong>
+Here it comes! Neo’s <strong>Techgic</strong>!
+
+What is it today… Wow, look!
+
+Fireworks…!
+
+On top of that,
+Cherry blossom petals are fluttering down to the stage!
+
+<strong>[MC]:</strong>
+(Techgic.
+A mysterious power that can be used by synchronizing with Kirarium.)
+
+(The type of techgic used depends on the individual.)
+
+(That is Neo’s Techgic…)
+
+<strong>Neo:</strong>
+(A flurry of cherry blossom petals that signal a new beginning.)
+
+Haha!
+It’s perfect for today!
+
+<strong>Didi:</strong>
+(Neo is amazing, as expected…)
+
+<em><strong>Venue Waiting Room</strong></em>
+
+<strong>Neo:</strong>
+Thank you for today!
+
+How was our Spark Ride?
+
+<div class="dialogue-options">
+    <div class="option-left">
+        <strong>[MC]:</strong>
+It was really nice.
+
+<strong>Neo:</strong>
+Right? Giving everyone hopes and dreams.
+That’s what UPbeats! are all about.
+    </div>
+
+    <div class="option-right">
+        <strong>[MC]:</strong>
+I’m looking forward to what comes next.
+
+<strong>Neo:</strong>
+I’m glad!
+That means there is still room for growth.
+    </div>
+</div>
+
+<strong>[MC]:</strong>
+But there are some things that bother me…
+
+<strong>Neo:</strong>
+What’s bothering you?
+
+<strong>[MC]:</strong>
+It seemed a bit unbalanced to me.
+
+<strong>Neo:</strong>
+What does that mean?
+
+<strong>[MC]:</strong>
+(It was definitely a fantastic ride.)
+
+(But…)
+
+<strong>UPbeats!</strong> has 5 members, right?
+
+<strong>Neo:</strong>
+…Ah!
+
+Haha… That’s amazing…
+You’re amazing…
+
+I can’t believe you noticed that after only watching it once…
+
+……
+
+If I say this,
+I know it will upset you.
+I really shouldn’t say it.
+
+Nevertheless, let me say this.
+
+Now you’re going to go,
+And greet the other teams, right?
+
+And once the introductions are complete,
+You’ll move on to support each team, right?
+
+<strong>[MC]:</strong>
+Yes.
+
+<strong>Neo:</strong>
+Well, about that…
+
+Could you support UPbeats! right now?
+
+……
+
+<strong>[MC]:</strong>
+I need to look at the other options…
+
+<strong>Neo:</strong>
+Haha, you’re right.
+Sorry for causing you trouble!
+
+Okay then, just remember this.
+
+From now on,
+I will continue to fulfill everyone’s dreams as a Spark Rider.
+
+But my own dream is…
+
+I want to make it happen with you.
+
+<em><strong>SIKR Main Gate</strong></em>
+
+<strong>Rutie:</strong>
+Rutititi!
+Thank you for your hard work yesterday!
+
+<strong>Maeka:</strong>
+Neo was overjoyed.
+He thanked me for introducing him to the best Conductor.
+
+But it’s just the beginning.
+
+There are other Riders waiting for you.
+
+<strong>Rutie:</strong>
+I agree!
+So, next,
+[MC]-sama will be heading to…
+
+A beautiful glass city on water.
+A city where fantasy and reality intersect.
+It’s <strong>Crystal Float</strong>!
+
+<strong>Maeka:</strong>
+Hehe, don’t be deceived by illusions,
+And lose sight of the truth.
+</div>
+
+
+<div class="chapter-navigation">
+    <a href="sparklinkms1.html">
+        Previous chapter ←
+        <small>Episode 1</small>
+    </a>
+    <a href="sparklinkms3.html">
+        Next chapter →
+        <small>Episode 3</small>
+    </a>
+</div>
+
+    </main>
+
+    <footer>
+
+        Made with
+        <span class="footer-heart">♥</span>
+        by (@bpdbnnuy_)
+
+        <br><br>
+
+        Chii-chan's Lovebox · 2026
+
+    </footer>
+
+</body>
+</html>
