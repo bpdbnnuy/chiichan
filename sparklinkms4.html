@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sparklink Stars - Episode 4</title>
+
+    <style>
+        /* =========================
+           GENERAL PAGE
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background: #fff4fa;
+            color: #5f4b58;
+        }
+
+        .links {
+            height: auto;
+        }
+        
+        .links a {
+            color: #5f4b58;
+        }
+
+
+
+        /* =========================
+           TOP DECORATION
+        ========================= */
+
+        .top-decoration {
+            height: 14px;
+            background: repeating-linear-gradient(
+                45deg,
+                #ff9fc8,
+                #ff9fc8 12px,
+                #ffd2e5 12px,
+                #ffd2e5 24px
+            );
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            text-align: center;
+            padding: 55px 20px 40px;
+
+            background:
+                radial-gradient(circle at 20% 30%, #ffffff 0 3px, transparent 5px),
+                radial-gradient(circle at 80% 30%, #ffffff 0 3px, transparent 5px),
+                #ffc6df;
+
+            border-bottom: 4px solid #f39abd;
+        }
+
+        .heart {
+            font-size: 42px;
+        }
+
+        h1 {
+            margin: 8px 0 5px;
+
+            font-family: Georgia, serif;
+            font-size: clamp(38px, 8vw, 70px);
+
+            color: #9c4f76;
+
+            text-shadow: 3px 3px 0 #fff;
+        }
+
+        .subtitle {
+            margin: 0;
+            font-size: 17px;
+            letter-spacing: 1px;
+            color: #8d6177;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            padding: 16px;
+
+            background: #fff;
+            border-bottom: 1px solid #f2cada;
+        }
+
+        nav a {
+            text-decoration: none;
+
+            padding: 9px 18px;
+
+            border-radius: 999px;
+
+            color: #9c4f76;
+            background: #fff0f6;
+
+            border: 1px solid #f3c3d8;
+
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background: #ffc6df;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        main {
+            width: min(1000px, 92%);
+            margin: 40px auto;
+        }
+
+        .welcome {
+            text-align: center;
+
+            background: white;
+
+            padding: 35px 25px;
+
+            border-radius: 25px;
+
+            border: 2px solid #f5c9dc;
+
+            box-shadow: 0 8px 25px rgba(170, 100, 130, 0.08);
+        }
+
+        .welcome h2 {
+            margin-top: 0;
+
+            color: #a34f78;
+            font-family: Georgia, serif;
+        }
+
+        .welcome p {
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           GAME CARDS
+        ========================= */
+
+        .section-title {
+            text-align: center;
+
+            margin: 45px 0 20px;
+
+            font-family: Georgia, serif;
+            color: #9c4f76;
+        }
+
+        .games {
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+            gap: 20px;
+        }
+
+        .game-card {
+            position: relative;
+
+            padding: 28px;
+
+            background: white;
+
+            border-radius: 24px;
+
+            border: 2px solid #f3cada;
+
+            text-align: center;
+
+            box-shadow: 0 8px 20px rgba(170, 100, 130, 0.08);
+
+            transition: 0.25s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow: 0 12px 30px rgba(170, 100, 130, 0.15);
+        }
+
+        .game-icon {
+            font-size: 55px;
+        }
+
+        .game-card h3 {
+            color: #9c4f76;
+
+            font-family: Georgia, serif;
+
+            font-size: 25px;
+        }
+
+        .game-card p {
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+
+            margin-top: 10px;
+
+            padding: 10px 22px;
+
+            border-radius: 999px;
+
+            background: #f49fc5;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: #db76a5;
+            transform: scale(1.04);
+        }
+
+
+        /* =========================
+           LITTLE NOTE
+        ========================= */
+
+        .note {
+            margin-top: 30px;
+
+            padding: 20px;
+
+            background: #fff0f6;
+
+            border: 1px dashed #e8a9c5;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            margin-top: 60px;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            background: #ffd8e8;
+
+            color: #8d6177;
+
+            font-size: 14px;
+        }
+
+        .footer-heart {
+            color: #df6e9e;
+        }
+
+        
+/* ♡ Next chapter box ♡ */
+
+.chapter-navigation {
+    max-width: 760px;
+    margin: 16px auto 35px;
+    padding: 14px 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    background: #fffafd;
+    border: 1px solid #f0dce8;
+    border-radius: 12px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    color: #9b7a8d;
+}
+
+.chapter-navigation a {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    color: #a65d89;
+    text-decoration: none;
+    text-align: right;
+    font-weight: bold;
+}
+
+.chapter-navigation a:hover {
+    color: #d68bb5;
+}
+
+.chapter-navigation small {
+    font-size: 11px;
+    font-weight: normal;
+    color: #9b7a8d;
+}
+
+@media (max-width: 600px) {
+    .chapter-navigation {
+        margin: 16px 12px 30px;
+        padding: 12px;
+    }
+}
+
+
+        h3 {
+            color: #5f4b58;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 17px;
+            line-height: 1.9;
+            font-style: italic;
+        }
+
+
+.translation {
+    max-width: 760px;
+    margin: 30px auto;
+    padding: 28px 32px;
+
+    background-color: #fffafd;
+    color: #5f4b58;
+
+    border: 1px solid #f0dce8;
+    border-radius: 16px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.9;
+
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+
+    box-shadow: 0 4px 14px rgba(160, 105, 140, 0.08);
+}
+
+@media (max-width: 600px) {
+    .translation {
+        margin: 20px 12px;
+        padding: 20px 18px;
+        font-size: 16px;
+        line-height: 1.85;
+    }
+}
+
+
+/* ♡ Dialogue choices ♡ */
+
+.dialogue-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+
+    margin: 25px 0;
+    color: #9b638b;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.option-left {
+    text-align: left;
+    flex: 1;
+}
+
+.option-right {
+    text-align: right;
+    flex: 1;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    .dialogue-options {
+        gap: 15px;
+        font-size: 14px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sparklink Stars</h1>
+        <p>Main Story</p>
+    </header>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="sparklink.html">Sparklink Stars</a>
+
+        <a href="18trip.html">18TRIP</a>
+
+    </nav>
+
+    <main>
+
+        <h2>Episode 4 | Where Is the One I seek?</h2>
+
+        <div class="translation">
+You have arrived in,
+Wisdom Hill, a city of wisdom where the scent of roses fills the air.
+A place where tradition thrives.
+
+Wisdom Hill is a very,
+Very quiet town.
+A town where everyone lives the same routine.
+
+However, there is one place.
+It’s a very lively castle,
+That changes day by day.
+
+Beyond the beautiful garden lies the castle…
+
+A shy and awkward young man and his friends are waiting for you.
+
+Please, don’t be afraid.
+They are very kind people…
+
+<em><strong>Wisdom Hill Main Street</strong></em>
+
+<strong>???:</strong>
+Welcome to <strong>Wisdom Hill</strong>.
+
+My name is Sous Chevliel.
+
+I am a member of the team you will be in charge of,
+<strong>Endelore</strong>.
+
+<strong>[MC]:</strong>
+Did you go out of your way to come and pick me up?
+
+<strong>Sous:</strong>
+It wasn’t “out of my way”.
+
+I just wanted to be the first one to meet you, my lovely one.
+
+This is the result of fulfilling my own desires.
+
+<strong>???:</strong>
+That’s right! We just wanted to show you our love!
+
+Nice to meet you, Conductor.
+My name is Nicolas Vanitere.
+I’m the leader of Endelore!
+
+I look forward to working with you from now on.
+
+<strong>[MC]:</strong>
+(I can’t take my eyes off him. I wonder why?)
+
+<strong>Nicolas:</strong>
+To capture everyone’s attention.
+
+That’s my <strong>techgic</strong>.
+
+What do you think? Isn’t it an amazing power?
+
+<strong>[MC]:</strong>
+Yes. That’s amazing.
+
+<strong>Nicolas:</strong>
+Hahaha! You accepted it so readily.
+Your kindness is wonderful, too.
+
+Alright, let us show you around!
+
+This is the base of operations for Endelore.
+And what will be held here is…
+
+A grand dinner party!
+
+<em><strong>Great Library, West Tower</strong></em>
+
+<strong>Sous:</strong>
+Welcome, Conductor.
+
+Today, we are delighted to welcome you,
+With great excitement.
+
+I sincerely hope this moment will be etched in your heart…
+
+All of us will offer our utmost hospitality.
+
+Now, everyone.
+Let's begin.
+
+<strong>???:</strong>
+It’s a pleasure to meet you, Conductor.
+The wonderful dinner is about to begin!
+
+<strong>???:</strong>
+It is so delicious, it will melt your cheeks off.
+A flutter in your tummy ♪  A sparkle in your heart ♪ 
+
+<strong>Nicolas:</strong>
+Our Spark Ride will add a touch of glamour to your meal!
+A special event just for you,
+Only for tonight.
+
+<strong>???:</strong>
+Mmh~♪ This soup melts in your mouth!
+
+<strong>???:</strong>
+Mmh~♪ Honeycomb smile!
+
+<strong>Nicolas:</strong>
+This is absolutely irresistible!
+
+<strong>Sous:</strong>
+Ah, what a wonderful moment.
+Ah, what a wonderful encounter.
+
+<strong>???:</strong>
+Come on, take our hands.
+
+<strong>???:</strong>
+Let’s play the melody of our encounter.
+
+<strong>Nicolas:</strong>
+Gentle and delicate, yet strong!
+
+<strong>Sous:</strong>
+Now now, for the finale…
+Chan Rosieriste’s once-in-a-lifetime grand welcome!
+
+<strong>Chan:</strong>
+Thank you for coming.
+
+<strong>Conductorrrrrrr~♪</strong>
+
+<strong>??? & Chan:</strong>
+……
+
+<strong>???:</strong>
+Nicolas, are you sure it was okay?
+
+<strong>Nicolas:</strong>
+Perfect!
+
+<strong>Chan:</strong>
+Sous, are you really sure?
+This isn’t really how I act…
+
+<strong>Sous:</strong>
+My dear friend, please bear with it.
+We cannot afford to leave a bad impression on the Conductor.
+
+<strong>[MC]:</strong>
+Um, is something the matter?
+
+<strong>??? & Chan:</strong>
+……Ah!
+
+<strong>???:</strong>
+It’s nothing!
+Now! Let’s have an exciting and fun dinner…
+
+Guh!
+
+<strong>Nicolas:</strong>
+No!
+Lisse’s embarrassment has reached its level!
+
+<strong>Sous:</strong>
+Hmm… That’s strange.
+I thought you usually showed various sides of your personality during Spark Rides,
+According to the performance…
+
+<strong>Lisse:</strong>
+This isn’t a stage…
+And even on stage,
+I wouldn’t become such a wild character…
+
+<strong>Nicolas:</strong>
+Damn! I guess it was too much!
+
+<strong>[MC]:</strong>
+(They were pushing themselves and trying their best.
+…They are such kind people.)
+
+<strong>Lisse:</strong>
+No, it was a valuable experience.
+I see. So this is what happens when my embarrassment exceeds its limit.
+
+That’s another piece of knowledge I’ve gained.
+
+<strong>Sous:</strong>
+As expected, Lisse-sama.
+You are as curious as ever today.
+
+<strong>Lisse:</strong>
+—Either way.
+The past me is gone.
+
+No matter how important it is to make a good first impression,
+You shouldn’t pretend to be someone you’re not.
+
+<strong>Chan:</strong>
+I think so too.
+
+<strong>Sous:</strong>
+Yes. I think that would be better.
+
+<strong>Lisse & Chan:</strong>
+……
+
+Why did you make us do it, then?!
+
+<strong>Sous:</strong>
+I’m a little embarrassed to admit this,
+But I absolutely love watching the two of you behave in a fun way.
+
+<strong>Lisse & Chan:</strong>
+The one who should be embarrassed,
+Is me!
+
+<strong>Lisse:</strong>
+Haa…
+Honestly, Sous…
+
+Once again, I am Lisse Courage.
+I’m the center of Endelore.
+Please, forget about the character I was just playing.
+
+But I truly do want to welcome you.
+So please, don’t forget that.
+
+<strong>[MC]:</strong>
+It was lively and fun.
+
+<strong>Lisse:</strong>
+Well, it’s a bit embarrassing,
+But I’m glad you enjoyed it.
+
+By the way,
+You’ve seen other Riders, right?
+
+<strong>[MC]:</strong>
+Yes.
+
+<strong>Lisse:</strong>
+I’d like to know,
+What were the other Riders like?
+We don’t normally have many opportunities to interact.
+I’d really love to talk about that—
+
+<strong>Nicolas:</strong>
+Lisse, calm down.
+
+<strong>Lisse:</strong>
+Ah.
+
+Sorry. When something piques my interest,
+I tend to ask lots of questions.
+
+<strong>[MC]:</strong>
+Feel free to ask me anything.
+
+<strong>Lisse:</strong>
+Thank you.
+But it wouldn’t be fair if I was the only one talking to you.
+
+I’ll pass the turn over to Chan, now.
+
+<strong>Chan:</strong>
+U-um…
+
+I am Chan Rosieriste…
+
+I don’t know which Rider you’ll be in charge of, but…
+
+It would be a huge help if you could look after Endelore…
+
+<strong>[MC]:</strong>
+(Is he perhaps shy?)
+
+<strong>Chan:</strong>
+Our goal, as Endelore,
+Is to participate in the <strong>Legendary Ride</strong>.
+
+It’s not just for the sake of honor.
+I have a <strong>reason</strong> why I absolutely must participate.
+
+<strong>[MC]:</strong>
+Could you tell me more about that?
+
+<strong>Lisse:</strong>
+That’s the first time I’ve heard of it.
+So that’s what you’ve been going through, Chan?
+
+<strong>Chan:</strong>
+……
+
+I’m sorry, but I can’t tell you right now.
+That goes for you too, Lisse.
+
+<strong>Lisse:</strong>
+What does that mean?
+Since we’re teammates,
+You could at least explain the situation properly…
+
+<strong>Chan:</strong>
+No.
+
+<strong>Lisse:</strong>
+……
+
+<strong>Sous:</strong>
+I’m sorry.
+My dear friend is extremely wary.
+
+If you, my dear,
+Will look after <strong>Endelore<strong>,
+I’ll eventually be able to explain the situation to you.
+
+<strong>[MC]:</strong>
+(It seems there are some complicated circumstances.)
+
+<strong>Chan:</strong>
+And also, this is a personal matter of mine…
+
+There is someone I’m looking for.
+
+<strong>[MC]:</strong>
+You’re looking for someone?
+
+<strong>Chan:</strong>
+That’s right.
+A <strong>curse</strong> upon me… Nevermind.
+
+<strong>[MC]:</strong>
+(Curse?)
+
+<strong>Chan:</strong>
+In any case, there’s someone I’m looking for.
+
+I want to find that person,
+And show them who I am now.
+
+I want to be acknowledged.
+
+That is why I’m a Spark Rider.
+
+……
+
+<strong>Nicolas:</strong>
+Hahaha! As always,
+Chan has a bit of a serious side to him!
+
+It’s going to be okay! Everything will be alright!
+
+<strong>Chan:</strong>
+How are you so sure?
+
+<strong>Nicolas:</strong>
+Isn’t it already decided?
+Me and Lisse, and Sous and Chan.
+
+I’m confident that if the four of us shame the same desire,
+There’s nothing we can’t achieve!
+
+<strong>Lisse:</strong>
+Hehe. That’s not bad.
+
+There’s no such thing as a convenient coincidence.
+If you want to turn luck into certainty,
+You have to show resolve to match it.
+
+<strong>Sous:</strong>
+I’m glad to hear that everything has been settled.
+Now, let’s leave the heavy topics behind,
+And continue with our wonderful dinner.
+
+We’ve put our heart and soul into making this,
+So please enjoy it to the fullest.
+
+<em><strong>SIKR Main Gate</strong></em>
+
+<strong>Maeka:</strong>
+How was Endelore?
+
+<strong>[MC]:</strong>
+They weren’t bad people.
+But…
+
+<strong>Maeka:</strong>
+What’s up?
+
+<strong>[MC]:</strong>
+There’s a lot of things I don’t understand.
+
+<strong>Maeka:</strong>
+Despite their appearances,
+The members of Endelore are quite cautious.
+
+They wouldn’t reveal their true selves after meeting you once.
+
+If you want to get to know them better,
+You should support them as their Conductor.
+
+Then you will understand.
+
+The kindness of a gentle, clumsy man.
+The love of a compassionate young man.
+The courage of a man who faces fear with grace,
+And the resolve of a proud rose with a mission.
+
+<strong>Rutie:</strong>
+But that will be after saying goodbye to the last Riders.
+
+Now, only one team remains.
+And finally, it’s <strong>aMazINC.<strong>
+ 
+Our destination is.
+<strong>Electricity</strong>, where happy laughter echoes.
+
+<strong>Maeka:</strong>
+In the most vibrant city,
+Those most bound by the past await you.
+
+</div>
+
+<div class="chapter-navigation">
+    <a href="sparklinkms3.html">
+        Previous chapter ←
+        <small>Episode 3</small>
+    </a>
+    <a href="sparklinkms5.html">
+        Next chapter →
+        <small>Episode 5</small>
+    </a>
+</div>
+
+    </main>
+
+    <footer>
+
+        Made with
+        <span class="footer-heart">♥</span>
+        by (@bpdbnnuy_)
+
+        <br><br>
+
+        Chii-chan's Lovebox · 2026
+
+    </footer>
+
+</body>
+</html>
