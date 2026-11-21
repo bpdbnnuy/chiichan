@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sparklink Stars - Episode 5</title>
+
+    <style>
+        /* =========================
+           GENERAL PAGE
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background: #fff4fa;
+            color: #5f4b58;
+        }
+
+        .links {
+            height: auto;
+        }
+        
+        .links a {
+            color: #5f4b58;
+        }
+
+
+
+        /* =========================
+           TOP DECORATION
+        ========================= */
+
+        .top-decoration {
+            height: 14px;
+            background: repeating-linear-gradient(
+                45deg,
+                #ff9fc8,
+                #ff9fc8 12px,
+                #ffd2e5 12px,
+                #ffd2e5 24px
+            );
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            text-align: center;
+            padding: 55px 20px 40px;
+
+            background:
+                radial-gradient(circle at 20% 30%, #ffffff 0 3px, transparent 5px),
+                radial-gradient(circle at 80% 30%, #ffffff 0 3px, transparent 5px),
+                #ffc6df;
+
+            border-bottom: 4px solid #f39abd;
+        }
+
+        .heart {
+            font-size: 42px;
+        }
+
+        h1 {
+            margin: 8px 0 5px;
+
+            font-family: Georgia, serif;
+            font-size: clamp(38px, 8vw, 70px);
+
+            color: #9c4f76;
+
+            text-shadow: 3px 3px 0 #fff;
+        }
+
+        .subtitle {
+            margin: 0;
+            font-size: 17px;
+            letter-spacing: 1px;
+            color: #8d6177;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            padding: 16px;
+
+            background: #fff;
+            border-bottom: 1px solid #f2cada;
+        }
+
+        nav a {
+            text-decoration: none;
+
+            padding: 9px 18px;
+
+            border-radius: 999px;
+
+            color: #9c4f76;
+            background: #fff0f6;
+
+            border: 1px solid #f3c3d8;
+
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background: #ffc6df;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        main {
+            width: min(1000px, 92%);
+            margin: 40px auto;
+        }
+
+        .welcome {
+            text-align: center;
+
+            background: white;
+
+            padding: 35px 25px;
+
+            border-radius: 25px;
+
+            border: 2px solid #f5c9dc;
+
+            box-shadow: 0 8px 25px rgba(170, 100, 130, 0.08);
+        }
+
+        .welcome h2 {
+            margin-top: 0;
+
+            color: #a34f78;
+            font-family: Georgia, serif;
+        }
+
+        .welcome p {
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           GAME CARDS
+        ========================= */
+
+        .section-title {
+            text-align: center;
+
+            margin: 45px 0 20px;
+
+            font-family: Georgia, serif;
+            color: #9c4f76;
+        }
+
+        .games {
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+            gap: 20px;
+        }
+
+        .game-card {
+            position: relative;
+
+            padding: 28px;
+
+            background: white;
+
+            border-radius: 24px;
+
+            border: 2px solid #f3cada;
+
+            text-align: center;
+
+            box-shadow: 0 8px 20px rgba(170, 100, 130, 0.08);
+
+            transition: 0.25s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow: 0 12px 30px rgba(170, 100, 130, 0.15);
+        }
+
+        .game-icon {
+            font-size: 55px;
+        }
+
+        .game-card h3 {
+            color: #9c4f76;
+
+            font-family: Georgia, serif;
+
+            font-size: 25px;
+        }
+
+        .game-card p {
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+
+            margin-top: 10px;
+
+            padding: 10px 22px;
+
+            border-radius: 999px;
+
+            background: #f49fc5;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: #db76a5;
+            transform: scale(1.04);
+        }
+
+
+        /* =========================
+           LITTLE NOTE
+        ========================= */
+
+        .note {
+            margin-top: 30px;
+
+            padding: 20px;
+
+            background: #fff0f6;
+
+            border: 1px dashed #e8a9c5;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            margin-top: 60px;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            background: #ffd8e8;
+
+            color: #8d6177;
+
+            font-size: 14px;
+        }
+
+        .footer-heart {
+            color: #df6e9e;
+        }
+
+        
+/* ♡ Next chapter box ♡ */
+
+.chapter-navigation {
+    max-width: 760px;
+    margin: 16px auto 35px;
+    padding: 14px 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    background: #fffafd;
+    border: 1px solid #f0dce8;
+    border-radius: 12px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    color: #9b7a8d;
+}
+
+.chapter-navigation a {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    color: #a65d89;
+    text-decoration: none;
+    text-align: right;
+    font-weight: bold;
+}
+
+.chapter-navigation a:hover {
+    color: #d68bb5;
+}
+
+.chapter-navigation small {
+    font-size: 11px;
+    font-weight: normal;
+    color: #9b7a8d;
+}
+
+@media (max-width: 600px) {
+    .chapter-navigation {
+        margin: 16px 12px 30px;
+        padding: 12px;
+    }
+}
+
+
+        h3 {
+            color: #5f4b58;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 17px;
+            line-height: 1.9;
+            font-style: italic;
+        }
+
+
+.translation {
+    max-width: 760px;
+    margin: 30px auto;
+    padding: 28px 32px;
+
+    background-color: #fffafd;
+    color: #5f4b58;
+
+    border: 1px solid #f0dce8;
+    border-radius: 16px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.9;
+
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+
+    box-shadow: 0 4px 14px rgba(160, 105, 140, 0.08);
+}
+
+@media (max-width: 600px) {
+    .translation {
+        margin: 20px 12px;
+        padding: 20px 18px;
+        font-size: 16px;
+        line-height: 1.85;
+    }
+}
+
+
+/* ♡ Dialogue choices ♡ */
+
+.dialogue-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+
+    margin: 25px 0;
+    color: #9b638b;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.option-left {
+    text-align: left;
+    flex: 1;
+}
+
+.option-right {
+    text-align: right;
+    flex: 1;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    .dialogue-options {
+        gap: 15px;
+        font-size: 14px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sparklink Stars</h1>
+        <p>Main Story</p>
+    </header>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="sparklink.html">Sparklink Stars</a>
+
+        <a href="18trip.html">18TRIP</a>
+
+    </nav>
+
+    <main>
+
+        <h2>Episode 5 | To a Worthy Me</h2>
+
+        <div class="translation">
+How was it?
+The pride and joy of Electri City,
+The TeleporDoor?
+
+Was it so fun you couldn’t help but scream?
+
+Wow! You already met the requirements!
+
+What Electri City craves,
+Is everyone’s joyful screams.
+It’s a city that’s always filled with laughter.
+
+This is a slightly special town.
+Even some unusual monster races live here.
+
+When you hear the word monster, do you get scared?
+
+Tsk tsk tsk. No need to worry.
+
+What they want is everyone’s cheerful laughter.
+
+But don’t miss it, okay?
+
+The tears drowned out by overflowing laughter.
+
+Make sure you save them…
+
+<em><strong>Electri City Station Front</strong></em>
+
+<strong>[MC]:</strong>
+(This is Electri City…)
+
+(I’m pretty sure we were supposed to meet in front of the station… Ah.)
+
+<strong>???:</strong>
+Welcome to Electri City!
+
+<strong>???:</strong>
+Conductor.
+We welcome you.
+
+<strong>[MC]:</strong>
+I am [MC].
+
+<strong>Laughta:</strong>
+Well, well, thank you kindly.
+I’m Laughta Vox!
+Good to be working with you, <strong>Con-chan</strong>.
+
+<strong>Noah:</strong>
+I am Noah Slugger.
+
+<strong>Laughta:</strong>
+I had heard you were visiting various teams,
+But I never imagined we’d be the last ones.
+
+<strong>[MC]:</strong>
+I’m sorry for the delay.
+
+<strong>Laughta:</strong>
+Not at all!
+On the contrary, I’m grateful!
+
+They always save the best for last.
+It’s the most fitting order for a genius like me!
+
+And we should be apologizing.
+
+<strong>aMazINC.</strong> has three members,
+But the last member had personal business to attend to.
+
+He’ll be a little late joining us.
+
+So first, Noah and I will show you around.
+
+Don’t worry.
+This plan was devised by a genius.
+I promise you the absolute best tour possible.
+
+<strong>Noah:</strong>
+You keep raising the expectations too high.
+
+<strong>Laughta:</strong>
+Of course. The higher the bar,
+The greater the sense of accomplishment when you overcome it.
+
+<strong>Noah:</strong>
+…I’m sure.
+
+<strong>Laughta:</strong>
+Alright, let’s go!
+Enjoy the wonderful <strong>Electri City</strong> sightseeing to the fullest.
+
+<em><strong>Electri City Main Street</strong></em>
+
+<strong>Laughta:</strong>
+This is a business district.
+
+Electri City encompasses a wide variety of industries.
+
+The business district is home to a lot of hard-working people.
+
+<strong>Woman in Suit:</strong>
+Ah! It’s Laughta and Noah!
+
+<strong>Laughta:</strong>
+Look, we’ve already been recognized.
+Being popular is tough—
+
+<strong>Woman in Suit:</strong>
+Huh? But <strong>Shu</strong> isn’t here.
+Nevermind then.
+
+<strong>Laughta:</strong>
+……
+
+It seems she had another objective.
+
+Well, don’t worry about it!
+Eventually, everyone will understand the brilliance of my genius.
+
+Alright, let’s go to the next place!
+
+<strong>[MC]:</strong>
+(He seems like a positive person…)
+
+<em><strong>Energy Company (Outside)</strong></em>
+
+<strong>Laughta:</strong>
+Energy company.
+As the name suggests,
+It’s a place that generates energy.
+
+The energy generated here gets spread throughout Luminoustair.
+
+The source of the electricity we use every day is here.
+
+In other words, this place isn’t important just for Electri City,
+But for all of Luminoustair as well!
+
+<strong>Man in White Coat:</strong>
+Oh! It’s Laughta!
+
+<strong>Laughta:</strong>
+Oh, you called me?
+If it’s for an autograph, I’m available anytime—
+
+<strong>Man in White Coat:</strong>
+Um, could I possibly get <strong>Shu</strong>-san’s autograph?
+My daughter is a huge fan!
+
+<strong>Laughta:</strong>
+…Leave it to me!
+I promise to give your daughter the biggest smile ever!
+
+<strong>Man in White Coat:</strong>
+Thank you!
+
+<strong>Laughta:</strong>
+……
+
+<strong>Noah:</strong>
+It was just a coincidence.
+There are also people who support you.
+
+<strong>Laughta:</strong>
+Hahaha! Thanks for your unnecessary worry.
+But it’s not something to be hurt by,
+But to be happy about.
+
+Because it proves that our members are incredibly popular!
+
+<strong>[MC]:</strong>
+(That may be true, but…)
+
+<em><strong>Sakura Town</strong></em>
+
+<strong>Laughta:</strong>
+This is Sakura Town.
+The difference is quite different from before, right?
+
+Actually, there is a restaurant here that we go to often.
+
+When you become our Conductor—
+
+<em>Cheers</em>
+
+Oh my.
+That’s what they call third time’s the charm—
+
+<strong>???:</strong>
+Sorry, everyone.
+Could you let me through for a moment?
+
+<strong>Crowd:</strong>
+Okaaay!
+
+<strong>???:</strong>
+Laughta, Noah, sorry to keep you waiting!
+
+<strong>Laughta:</strong>
+……
+
+<strong>???:</strong>
+I’m glad I finished my errants as planned.
+So…
+
+What’s wrong, Laughta?
+
+<strong>Laughta:</strong>
+Something that happened twice, will happen a third time.
+
+<strong>???:</strong>
+What do you mean?
+
+<strong>Laughta:</strong>
+No, don’t worry about it.
+
+I’ve been waiting forever, Shu!
+Did work go smoothly?
+
+<strong>Shu:</strong>
+Yes, I had a great time playing with the kids today, too.
+
+<strong>Laughta:</strong>
+Impressive, this guy!
+He deserves a special petting as a reward!
+
+<strong>Shu:</strong>
+Woah. Stop it, Laughta.
+People are watching…
+
+<strong>Noah:</strong>
+Before all that,
+Shouldn’t you guys be focusing on the Conductor?
+
+<strong>Laughta & Shu:</strong>
+Ah.
+
+<strong>Shu:</strong>
+Sorry.
+Just meeting wasn’t enough.
+
+I’m Shu Ayakashi.
+Leader and center of aMazINC.
+I’m technically doing both.
+
+<strong>[MC]:</strong>
+Nice to meet you.
+
+(He’s incredibly popular,
+It makes sense he’s both the leader and center.)
+
+(But…)
+
+<strong>Laughta:</strong>
+I want to be the center too…
+
+<strong>[MC]:</strong>
+(I’m a little curious about Laughta…)
+
+<strong>Shu:</strong>
+I’m sorry about today.
+Every week, I spend some time with the kids.
+
+That’s the one thing I cannot cancel.
+
+Well,
+Not everything went perfectly, though.
+
+<strong>Noah:</strong>
+Is that child still not smiling?
+
+<strong>Shu:</strong>
+Yeah. I’ve tried various things,
+But it just doesn’t work.
+
+The reason that girl doesn’t smile is surely because I’m not good enough…
+
+<strong>[MC]:</strong>
+(He’s incredibly popular,
+But he still has his worries…)
+
+<strong>Noah:</strong>
+It’s premature to jump to conclusions.
+Instead of blaming your lack of ability,
+Focus on understanding that girl better.
+
+<strong>Shu:</strong>
+I know. But can I really do it?
+
+<strong>Noah:</strong>
+Don’t try to shoulder everything on your own.
+Your problem is our problem.
+
+<strong>Laughta:</strong>
+That’s true!
+Don’t worry, everything will be fine with that girl.
+
+Eventually, everything will get solved!
+
+<strong>Shu:</strong>
+Right…
+Yes, thank you both.
+
+<strong>Laughta & Noah:</strong>
+……
+
+<strong>Laughta:</strong>
+I’m sorry for creating such a gloomy atmosphere.
+
+But don’t worry!
+
+From here on, the three of us from aMazINC. promise you an amazing sightseeing experience!
+
+You will have the most talked about team of Electri City all to yourself.
+
+Enjoy this luxury to the fullest.
+
+<em><strong>Electri City Station Front</strong></em>
+
+<strong>Laughta:</strong>
+Okay, this is the last stop.
+
+Finally, we’re in front of the Electri City station!
+
+I’ll make sure to guide you all the way back.
+
+<strong>Noah:</strong>
+This place has developed quite a bit.
+
+<strong>Shu:</strong>
+Noah, doesn’t that make you sound old?
+
+<strong>Noah:</strong>
+That’s fine with me.
+
+<strong>Laughta:</strong>
+How was it?
+How was your Electri City tour today?
+
+<strong>[MC]:</strong>
+I had a great time.
+
+<strong>Laughta:</strong>
+Right?
+But you don’t need to thank me.
+
+Because we had fun too.
+It’s a mutual thing, you know.
+
+And now you’ve made up your mind, haven’t you?
+
+The first team you should attend to, more than anyone else,
+Is us, <strong>aMazINC.</strong>!
+
+With a genius like me on the team,
+Participation in the <strong>Legendary Ride</strong> is practically guaranteed!
+
+Even with games,
+You start with easy mode.
+
+You should attend to us, the easy ones, first,
+And then take care of the other teams.
+
+You think so too, don’t you?
+
+<strong>[MC]:</strong>
+(......)
+
+<strong>Laughta:</strong>
+I want to be the center too…
+
+<strong>Shu:</strong>
+The reason that girl doesn’t smile is surely because I’m not good enough…
+
+<strong>[MC]:</strong>
+(aMazINC. isn’t easy.
+Both Laughta and Shu are carrying some kind of burden.)
+
+(It can’t be solved in just one day.
+But maybe, just a bit…)
+
+Laughta, can we talk for a bit, just us two?
+
+<strong>Laughta:</strong>
+Of course!
+
+It’s embarrassing to openly say that you’ll give us priority.
+
+I’ve definitely understood your message!
+
+Shu, Noah.
+Sorry, but can you wait a moment?
+
+<strong>Shu:</strong>
+Okay. I got it.
+
+<strong>Noah:</strong>
+Hurry it up.
+Staying up late ruins my sleep schedule.
+
+<strong>Laughta:</strong>
+So, what’s up?
+
+<strong>[MC]:</strong>
+(Shu is overwhelmingly popular.
+Anyone else would have gotten discouraged.
+But Laughta…)
+
+Laughta has the strength to never give up.
+
+<strong>Laughta:</strong>
+Haha! You say such nice things!
+
+But why would you say that?
+
+<strong>[MC]:</strong>
+I will definitely make you stand there. In the center.
+
+<strong>Laughta:</strong>
+……
+
+Oh no…
+You noticed.
+
+Shu is the center of aMazINC.
+He’s the ideal Rider,
+With great talent and a kind heart.
+
+Do you really think I can stand there,
+Instead of Shu?
+
+I’m the least popular of all,
+And I’m not even skilled enough.
+
+<strong>[MC]:</strong>
+I do.
+
+<strong>Laughta:</strong>
+I see…
+I see~!
+
+Then, as a genius,
+I have to live up to those expectations!
+
+And one more thing.
+I’d like to correct what I said earlier.
+
+<strong>[MC]:</strong>
+What is it?
+
+<strong>Laughta:</strong>
+I want you to come to us last!
+
+<strong>[MC]:</strong>
+Can I ask why?
+
+<strong>Laughta:</strong>
+I’m not worthy of you right now.
+I don’t want to welcome you while I’m still this pathetic.
+
+I will get more than enough courage.
+So by the time you’re back…
+
+I’ll stand in the center.
+
+At that moment, with a big smile,
+I will greet you.
+
+Well, if you’re really worried,
+You could become my <strong>personal Conductor</strong>,
+But I’ll leave that decision to you.
+
+Don’t worry,
+There is no problem if we put it off!
+
+Maybe, by the time you’ll be back,
+We’ll have even decided to enter the Legendary Ride?
+
+No matter what anyone says,
+I’m aMazINC.'s number one Spark Rider!
+
+<em><strong>SIKR Main Gate</strong></em>
+
+<strong>Maeka:</strong>
+Alright, so you’ve finished greeting all the teams.
+
+<strong>Rutie:</strong>
+All the teams were fantastic, weren’t they?
+
+<strong>Maeka:</strong>
+From this point on,
+I would like you to begin your activities as the Conductor of one of these teams.
+
+That’s why I will ask this.
+
+Which team will go first?
+
+<strong>[MC]:</strong>
+(The team I should look after…)
+
+<strong>Elie:</strong>
+I’ll definitely show it to you.
+My truth.
+
+<strong>Lisse:</strong>>
+There’s no such thing as a convenient coincidence.
+If you want to turn luck into certainty,
+You have to show resolve to match it.
+
+<strong>Laughta:</strong>
+No matter what anyone says,
+I’m aMazINC.'s number one Spark Rider!
+
+<strong>[MC]:</strong>
+(Midveil, Endelore, aMazINC.)
+
+(Each of them harbors their own feelings.
+But the first place I’m heading to is…)
+
+<strong>Neo:</strong>
+I want to make it happen with you.
+
+<strong>Maeka:</strong>
+Based on your expression, It looks like you've already decided.
+
+<strong>[MC]:</strong>
+Yes. The first place I’ll go to is…
+
+<strong>Maeka & Rutie:</strong>
+……
+
+<strong>[MC]:</strong>
+It’s UPbeats!
+
+
+
+<em>Fin</em>
+
+</div>
+
+<div class="chapter-navigation">
+    <a href="sparklinkms3.html">
+        Previous chapter ←
+        <small>Episode 4</small>
+    </a>
+    <a href="sparklink.html">
+        List of chapters
+    </a>
+</div>
+
+    </main>
+
+    <footer>
+
+        Made with
+        <span class="footer-heart">♥</span>
+        by (@bpdbnnuy_)
+
+        <br><br>
+
+        Chii-chan's Lovebox · 2026
+
+    </footer>
+
+</body>
+</html>
